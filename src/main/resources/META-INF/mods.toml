@@ -1,0 +1,28 @@
+modLoader="javafml" #mandatory
+loaderVersion="[36,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+license="MIT License"
+#issueTrackerURL="http://my.issue.tracker/" #optional
+[[mods]] #mandatory
+modId="hem" #mandatory
+version="1.0.0" #mandatory
+displayName="Hals Exploration Mod" #mandatory
+#updateJSONURL="http://myurl.me/" #optional
+#displayURL="http://example.com/" #optional
+#logoFile="hem.png" #optional
+#credits="Thanks for this example mod goes to Java" #optional
+authors="Halbeargamez, SameButDifferent" #optional
+description='''
+Exploration based tech and vehicle mod.
+'''
+[[dependencies.hem]] #optional
+   modId="forge" #mandatory
+   mandatory=true #mandatory
+   versionRange="[36,)" #mandatory
+   ordering="NONE"
+   side="BOTH"
+[[dependencies.hem]]
+   modId="minecraft"
+   mandatory=true
+   versionRange="[1.16.5,1.17)"
+   ordering="NONE"
+   side="BOTH"
