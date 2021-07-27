@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "hem:block/blueleaf_wheat_bottom"
+    },
+    "half=upper": {
+      "model": "hem:block/blueleaf_wheat_top"
+    }
+  }
+}

@@ -6,9 +6,9 @@ import net.minecraft.block.material.Material;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 
-public class BlueleafBushBlock extends BushBlock {
-    public BlueleafBushBlock() {
-        super(AbstractBlock.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS));
+public class BlueleafWheatBlock extends DoublePlantBlock {
+    public BlueleafWheatBlock() {
+        super(AbstractBlock.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.CROP));
     }
 
     @Override

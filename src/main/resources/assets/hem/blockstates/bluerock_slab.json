@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "hem:block/bluerock_slab_top"
+    },
+    "type=bottom": {
+      "model": "hem:block/bluerock_slab"
+    },
+    "type=double": {
+      "model": "hem:block/bluerock"
+    }
+  }
+}

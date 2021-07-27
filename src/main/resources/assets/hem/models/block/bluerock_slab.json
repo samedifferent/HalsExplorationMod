@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "side": "hem:block/bluerock",
+    "bottom": "hem:block/bluerock",
+    "top": "hem:block/bluerock"
+  }
+}

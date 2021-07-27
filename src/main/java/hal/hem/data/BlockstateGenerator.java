@@ -15,6 +15,18 @@ public class BlockstateGenerator extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+/*        ResourceLocation bluerock = modLoc("block/bluerock");
+        ResourceLocation cobbled_bluerock = modLoc("block/cobbled_bluerock");
+
+        simpleBlock(ModBlocks.ROSE_COPPER_ORE.get());
+        simpleBlock(ModBlocks.BLUEROCK.get());
+        slabBlock(ModBlocks.BLUEROCK_SLAB.get(), bluerock, bluerock);
+        stairsBlock(ModBlocks.BLUEROCK_STAIRS.get(), bluerock);
+        simpleBlock(ModBlocks.COBBLED_BLUEROCK.get());
+        slabBlock(ModBlocks.COBBLED_BLUEROCK_SLAB.get(), cobbled_bluerock, cobbled_bluerock);
+        stairsBlock(ModBlocks.COBBLED_BLUEROCK_STAIRS.get(), cobbled_bluerock);
+        wallBlock(ModBlocks.COBBLED_BLUEROCK_WALL.get(), cobbled_bluerock);*/
+
 /*
         saplingBlock(ModBlocks.BLUELEAF_SAPLING.get());
         saplingBlock(ModBlocks.SILVERWOOD_SAPLING.get());

@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "hem:block/bronzium_crystal",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "hem:block/bronzium_crystal",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "hem:block/bronzium_crystal",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "hem:block/bronzium_crystal",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "hem:block/bronzium_crystal"
+    },
+    "facing=west": {
+      "model": "hem:block/bronzium_crystal",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

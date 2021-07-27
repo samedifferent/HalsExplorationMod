@@ -17,6 +17,15 @@ public class ItemModelGenerator extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+/*        toBlock(ModBlocks.ROSE_COPPER_ORE);
+        toBlock(ModBlocks.BLUEROCK);
+        toBlock(ModBlocks.BLUEROCK_SLAB);
+        toBlock(ModBlocks.BLUEROCK_STAIRS);
+        toBlock(ModBlocks.COBBLED_BLUEROCK);
+        toBlock(ModBlocks.COBBLED_BLUEROCK_SLAB);
+        toBlock(ModBlocks.COBBLED_BLUEROCK_STAIRS);
+        wall(ModBlocks.COBBLED_BLUEROCK_WALL, ModBlocks.COBBLED_BLUEROCK);*/
+
 /*        blockToItemGenerated(ModBlocks.BLUELEAF_SAPLING);
         blockToItemGenerated(ModBlocks.SILVERWOOD_SAPLING);
         blockToItemGenerated(ModBlocks.DUSKWOOD_SAPLING);

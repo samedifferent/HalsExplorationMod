@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "side": "hem:block/cobbled_bluerock",
+    "bottom": "hem:block/cobbled_bluerock",
+    "top": "hem:block/cobbled_bluerock"
+  }
+}

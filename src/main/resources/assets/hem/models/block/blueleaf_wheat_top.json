@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "hem:block/blueleaf_wheat_top"
+  }
+}
