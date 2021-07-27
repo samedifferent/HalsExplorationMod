@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/tinted_cross",
+  "textures": {
+    "cross": "hem:block/blueleaf_tall_grass"
+  }
+}

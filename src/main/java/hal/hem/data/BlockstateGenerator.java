@@ -15,6 +15,13 @@ public class BlockstateGenerator extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+/*        logBlock(ModBlocks.CRYSTALIZED_HARDENED_LOG.get());
+        logBlock(ModBlocks.HARDENED_LOG.get());*/
+
+/*        crossModel(ModBlocks.BLUELEAF_SHORT_GRASS.get());
+        crossModel(ModBlocks.BLUELEAF_MEDIUM_GRASS.get());
+        crossModel(ModBlocks.BLUELEAF_TALL_GRASS.get());*/
+
 /*        ResourceLocation bluerock = modLoc("block/bluerock");
         ResourceLocation cobbled_bluerock = modLoc("block/cobbled_bluerock");
 
@@ -28,10 +35,10 @@ public class BlockstateGenerator extends BlockStateProvider {
         wallBlock(ModBlocks.COBBLED_BLUEROCK_WALL.get(), cobbled_bluerock);*/
 
 /*
-        saplingBlock(ModBlocks.BLUELEAF_SAPLING.get());
-        saplingBlock(ModBlocks.SILVERWOOD_SAPLING.get());
-        saplingBlock(ModBlocks.ROSEWOOD_SAPLING.get());
-        saplingBlock(ModBlocks.DUSKWOOD_SAPLING.get());
+        crossModel(ModBlocks.BLUELEAF_SAPLING.get());
+        crossModel(ModBlocks.SILVERWOOD_SAPLING.get());
+        crossModel(ModBlocks.ROSEWOOD_SAPLING.get());
+        crossModel(ModBlocks.DUSKWOOD_SAPLING.get());
 
 
         woodBlocks(ModBlocks.BLUELEAF_LOG.get(), ModBlocks.BLUELEAF_PLANKS.get(), ModBlocks.BLUELEAF_SLAB.get(), ModBlocks.BLUELEAF_STAIRS.get(), ModBlocks.BLUELEAF_FENCE.get(), ModBlocks.BLUELEAF_FENCE_GATE.get(), ModBlocks.BLUELEAF_TRAPDOOR.get(), ModBlocks.BLUELEAF_WALL.get());
@@ -50,8 +57,8 @@ public class BlockstateGenerator extends BlockStateProvider {
 
     }
 
-    private void saplingBlock(Block sapling) {
-        simpleBlock(sapling, models().cross(sapling.getRegistryName().getPath(), modLoc("block/" + sapling.getRegistryName().getPath())));
+    private void crossModel(Block plant) {
+        simpleBlock(plant, models().cross(plant.getRegistryName().getPath(), modLoc("block/" + plant.getRegistryName().getPath())));
     }
 
     private void woodBlocks(RotatedPillarBlock log, Block planks, SlabBlock slab, StairsBlock stairs, FenceBlock fence, FenceGateBlock gate, TrapDoorBlock trapdoor, WallBlock wall) {

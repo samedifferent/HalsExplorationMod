@@ -17,6 +17,17 @@ public class ItemModelGenerator extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+/*        toBlock(ModBlocks.CRYSTALIZED_HARDENED_LOG);
+        toBlock(ModBlocks.HARDENED_LOG);*/
+
+/*        itemGenerated(ModItems.BRONZIUM_INGOT);
+        itemGenerated(ModItems.COPPARITE_INGOT);
+        itemGenerated(ModItems.ROSE_COPPER_INGOT);*/
+
+/*        blockToItemGenerated(ModBlocks.BLUELEAF_SHORT_GRASS);
+        blockToItemGenerated(ModBlocks.BLUELEAF_MEDIUM_GRASS);
+        blockToItemGenerated(ModBlocks.BLUELEAF_TALL_GRASS);*/
+
 /*        toBlock(ModBlocks.ROSE_COPPER_ORE);
         toBlock(ModBlocks.BLUEROCK);
         toBlock(ModBlocks.BLUEROCK_SLAB);

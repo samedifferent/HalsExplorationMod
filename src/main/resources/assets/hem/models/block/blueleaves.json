@@ -1,0 +1,6 @@
+{
+  "parent": "hem:block/fancy_leaves",
+  "textures": {
+    "leaves": "hem:block/blueleaves"
+  }
+}

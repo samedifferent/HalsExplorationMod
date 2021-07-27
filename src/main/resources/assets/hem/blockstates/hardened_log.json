@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "hem:block/hardened_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "hem:block/hardened_log"
+    },
+    "axis=z": {
+      "model": "hem:block/hardened_log_horizontal",
+      "x": 90
+    }
+  }
+}

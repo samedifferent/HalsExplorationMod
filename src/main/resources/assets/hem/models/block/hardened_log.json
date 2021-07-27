@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "side": "hem:block/hardened_log",
+    "end": "hem:block/hardened_log_top"
+  }
+}

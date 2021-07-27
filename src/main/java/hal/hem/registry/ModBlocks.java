@@ -4,6 +4,7 @@ import hal.hem.HEM;
 import hal.hem.block.BlueleafBushBlock;
 import hal.hem.block.BlueleafWheatBlock;
 import hal.hem.block.BronziumCrystalBlock;
+import hal.hem.block.FloweringLilyBlock;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.trees.OakTree;
@@ -30,6 +31,8 @@ public class ModBlocks {
     public static final RegistryObject<BlueleafBushBlock> BLUELEAF_TALL_GRASS = registerBlock("blueleaf_tall_grass", BlueleafBushBlock::new);
     public static final RegistryObject<BlueleafBushBlock> BLUELEAF_MEDIUM_GRASS = registerBlock("blueleaf_medium_grass", BlueleafBushBlock::new);
     public static final RegistryObject<BlueleafBushBlock> BLUELEAF_SHORT_GRASS = registerBlock("blueleaf_short_grass", BlueleafBushBlock::new);
+    public static final RegistryObject<FloweringLilyBlock> FLOWERING_LILY = BLOCKS.register("flowering_lily", FloweringLilyBlock::new);
+    public static final RegistryObject<BlueleafBushBlock> GIANT_BLOSSOM = registerBlock("giant_blossom", BlueleafBushBlock::new);
     public static final RegistryObject<BronziumCrystalBlock> BRONZIUM_CRYSTAL = registerBlock("bronzium_crystal", BronziumCrystalBlock::new);
     public static final RegistryObject<Block> ROSE_COPPER_ORE = registerBlock("rose_copper_ore", () -> new Block(AbstractBlock.Properties.copy(Blocks.DIAMOND_ORE)));
     public static final RegistryObject<BlueleafWheatBlock> BLUELEAF_WHEAT = registerBlock("blueleaf_wheat", BlueleafWheatBlock::new);
@@ -94,7 +97,7 @@ public class ModBlocks {
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = ModBlocks.BLOCKS.register(name, block);
-        ModItems.ITEMS.register(name, () -> new BlockItem(toReturn.get(), new Item.Properties().tab(HEM.GROUP)));
+        ModItems.ITEMS.register(name, () -> new BlockItem(toReturn.get(), new Item.Properties().tab(HEM.TAB)));
         return toReturn;
     }
 }

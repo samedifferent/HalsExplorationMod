@@ -17,7 +17,7 @@ public class HEM {
     private static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "hem";
 
-    public static final ItemGroup GROUP = new ItemGroup(HEM.MOD_ID) {
+    public static final ItemGroup TAB = new ItemGroup(HEM.MOD_ID) {
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(ModItems.AIRSHIP.get());
