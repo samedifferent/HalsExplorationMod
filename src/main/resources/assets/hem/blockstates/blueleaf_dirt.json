@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "hem:block/blueleaf_dirt"
+      },
+      {
+        "model": "hem:block/blueleaf_dirt",
+        "y": 90
+      },
+      {
+        "model": "hem:block/blueleaf_dirt",
+        "y": 180
+      },
+      {
+        "model": "hem:block/blueleaf_dirt",
+        "y": 270
+      }
+    ]
+  }
+}

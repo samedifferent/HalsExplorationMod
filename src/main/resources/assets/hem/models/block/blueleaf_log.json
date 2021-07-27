@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "side": "hem:block/blueleaf_log",
+    "end": "hem:block/blueleaf_log_top"
+  }
+}

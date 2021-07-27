@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "hem:block/blueleaf_grass_block_top",
+    "bottom": "hem:block/blueleaf_dirt",
+    "side": "hem:block/blueleaf_grass_block"
+  }
+}

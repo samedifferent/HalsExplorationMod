@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "hem:block/silverwood_slab_top"
+    },
+    "type=bottom": {
+      "model": "hem:block/silverwood_slab"
+    },
+    "type=double": {
+      "model": "hem:block/silverwood_planks"
+    }
+  }
+}
