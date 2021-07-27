@@ -14,6 +14,11 @@ public class ClientEventHandler {
     @SubscribeEvent
     public static void init(final FMLClientSetupEvent event) {
         RenderTypeLookup.setRenderLayer(ModBlocks.BLUELEAF_SAPLING.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.DUSKWOOD_SAPLING.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.SILVERWOOD_SAPLING.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.ROSEWOOD_SAPLING.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.SILVERWOOD_TRAPDOOR.get(), RenderType.cutout());
+
         RenderTypeLookup.setRenderLayer(ModBlocks.BLUELEAVES.get(), RenderType.cutoutMipped());
     }
 }
