@@ -4,17 +4,15 @@ import hal.hem.registry.ModBlocks;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.shapes.IBooleanFunction;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
 
-public class BlueleafBushBlock extends BushBlock {
-    protected static final VoxelShape SHAPE = VoxelShapes.join(Block.box(0, 4, 0, 16, 14, 16), Block.box(5, 0, 5, 11, 4, 11), IBooleanFunction.OR);
+public class BlueleafTallGrassBlock extends BushBlock {
+    protected static final VoxelShape SHAPE = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 13.0D, 14.0D);
 
-    public BlueleafBushBlock() {
-        super(AbstractBlock.Properties.of(Material.WOOD).noOcclusion().strength(2.0F).sound(SoundType.WOOD));
+    public BlueleafTallGrassBlock() {
+        super(AbstractBlock.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.GRASS));
     }
 
     @Override
@@ -25,5 +23,10 @@ public class BlueleafBushBlock extends BushBlock {
     @Override
     public VoxelShape getShape(BlockState p_220053_1_, IBlockReader p_220053_2_, BlockPos p_220053_3_, ISelectionContext p_220053_4_) {
         return SHAPE;
+    }
+
+    @Override
+    public OffsetType getOffsetType() {
+        return AbstractBlock.OffsetType.XZ;
     }
 }

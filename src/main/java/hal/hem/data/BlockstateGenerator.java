@@ -15,6 +15,20 @@ public class BlockstateGenerator extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+  /*      paneBlock(ModBlocks.LIGHT_PINK_CRYSTAL_PANE.get(), modLoc("block/" + ModBlocks.LIGHT_PINK_CRYSTAL_BLOCK.get().getRegistryName().getPath()), modLoc("block/" + ModBlocks.LIGHT_PINK_CRYSTAL_BLOCK.get().getRegistryName().getPath()));
+        paneBlock(ModBlocks.WHITE_CRYSTAL_PANE.get(), modLoc("block/" + ModBlocks.WHITE_CRYSTAL_BLOCK.get().getRegistryName().getPath()), modLoc("block/" + ModBlocks.WHITE_CRYSTAL_BLOCK.get().getRegistryName().getPath()));
+        paneBlock(ModBlocks.PURPLE_CRYSTAL_PANE.get(), modLoc("block/" + ModBlocks.PURPLE_CRYSTAL_BLOCK.get().getRegistryName().getPath()), modLoc("block/" + ModBlocks.PURPLE_CRYSTAL_BLOCK.get().getRegistryName().getPath()));
+        paneBlock(ModBlocks.PINK_CRYSTAL_PANE.get(), modLoc("block/" + ModBlocks.PINK_CRYSTAL_BLOCK.get().getRegistryName().getPath()), modLoc("block/" + ModBlocks.PINK_CRYSTAL_BLOCK.get().getRegistryName().getPath()));
+*/
+/*        simpleBlock(ModBlocks.WHITE_CRYSTAL_BLOCK.get());
+        simpleBlock(ModBlocks.PINK_CRYSTAL_BLOCK.get());
+        simpleBlock(ModBlocks.LIGHT_PINK_CRYSTAL_BLOCK.get());
+        simpleBlock(ModBlocks.PURPLE_CRYSTAL_BLOCK.get());
+
+        wallBlock(ModBlocks.LIGHT_PINK_CRYSTAL_WALL.get(), modLoc("block/" + ModBlocks.LIGHT_PINK_CRYSTAL_BLOCK.get().getRegistryName().getPath()));
+        wallBlock(ModBlocks.WHITE_CRYSTAL_WALL.get(), modLoc("block/" + ModBlocks.WHITE_CRYSTAL_BLOCK.get().getRegistryName().getPath()));
+        wallBlock(ModBlocks.PURPLE_CRYSTAL_WALL.get(), modLoc("block/" + ModBlocks.PURPLE_CRYSTAL_BLOCK.get().getRegistryName().getPath()));
+        wallBlock(ModBlocks.PINK_CRYSTAL_WALL.get(), modLoc("block/" + ModBlocks.PINK_CRYSTAL_BLOCK.get().getRegistryName().getPath()));*/
 /*        logBlock(ModBlocks.CRYSTALIZED_HARDENED_LOG.get());
         logBlock(ModBlocks.HARDENED_LOG.get());*/
 

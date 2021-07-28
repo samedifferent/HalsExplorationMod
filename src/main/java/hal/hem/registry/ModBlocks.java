@@ -1,12 +1,10 @@
 package hal.hem.registry;
 
 import hal.hem.HEM;
-import hal.hem.block.BlueleafBushBlock;
-import hal.hem.block.BlueleafWheatBlock;
-import hal.hem.block.BronziumCrystalBlock;
-import hal.hem.block.FloweringLilyBlock;
+import hal.hem.block.*;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.block.trees.OakTree;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -23,16 +21,17 @@ public class ModBlocks {
     static AbstractBlock.Properties planks = AbstractBlock.Properties.copy(Blocks.OAK_PLANKS);
     static AbstractBlock.Properties log = AbstractBlock.Properties.copy(Blocks.OAK_LOG);
     static AbstractBlock.Properties leaves = AbstractBlock.Properties.copy(Blocks.OAK_LEAVES);
+    static AbstractBlock.Properties crystal = AbstractBlock.Properties.of(Material.GLASS, MaterialColor.COLOR_PURPLE).strength(1.0F).sound(SoundType.GLASS).noOcclusion();
 
     // ENVIRONMENT
     public static final RegistryObject<Block> BLUELEAF_GRASS_BLOCK = registerBlock("blueleaf_grass_block", () -> new Block(AbstractBlock.Properties.of(Material.GRASS).strength(0.6F).sound(SoundType.GRASS)));
     public static final RegistryObject<BlueleafBushBlock> BLUELEAF_BUSH = registerBlock("blueleaf_bush", BlueleafBushBlock::new);
     public static final RegistryObject<Block> BLUELEAF_DIRT = registerBlock("blueleaf_dirt", () -> new Block(AbstractBlock.Properties.copy(Blocks.DIRT)));
-    public static final RegistryObject<BlueleafBushBlock> BLUELEAF_TALL_GRASS = registerBlock("blueleaf_tall_grass", BlueleafBushBlock::new);
-    public static final RegistryObject<BlueleafBushBlock> BLUELEAF_MEDIUM_GRASS = registerBlock("blueleaf_medium_grass", BlueleafBushBlock::new);
-    public static final RegistryObject<BlueleafBushBlock> BLUELEAF_SHORT_GRASS = registerBlock("blueleaf_short_grass", BlueleafBushBlock::new);
+    public static final RegistryObject<BlueleafTallGrassBlock> BLUELEAF_TALL_GRASS = registerBlock("blueleaf_tall_grass", BlueleafTallGrassBlock::new);
+    public static final RegistryObject<BlueleafTallGrassBlock> BLUELEAF_MEDIUM_GRASS = registerBlock("blueleaf_medium_grass", BlueleafTallGrassBlock::new);
+    public static final RegistryObject<BlueleafTallGrassBlock> BLUELEAF_SHORT_GRASS = registerBlock("blueleaf_short_grass", BlueleafTallGrassBlock::new);
     public static final RegistryObject<FloweringLilyBlock> FLOWERING_LILY = BLOCKS.register("flowering_lily", FloweringLilyBlock::new);
-    public static final RegistryObject<BlueleafBushBlock> GIANT_BLOSSOM = registerBlock("giant_blossom", BlueleafBushBlock::new);
+    public static final RegistryObject<BlueleafTallGrassBlock> GIANT_BLOSSOM = registerBlock("giant_blossom", BlueleafTallGrassBlock::new);
     public static final RegistryObject<BronziumCrystalBlock> BRONZIUM_CRYSTAL = registerBlock("bronzium_crystal", BronziumCrystalBlock::new);
     public static final RegistryObject<Block> ROSE_COPPER_ORE = registerBlock("rose_copper_ore", () -> new Block(AbstractBlock.Properties.copy(Blocks.DIAMOND_ORE)));
     public static final RegistryObject<BlueleafWheatBlock> BLUELEAF_WHEAT = registerBlock("blueleaf_wheat", BlueleafWheatBlock::new);
@@ -93,7 +92,18 @@ public class ModBlocks {
     // HARDENED WOOD & CRYSTALS
     public static final RegistryObject<RotatedPillarBlock> HARDENED_LOG = registerBlock("hardened_log", () -> new RotatedPillarBlock(log));
     public static final RegistryObject<RotatedPillarBlock> CRYSTALIZED_HARDENED_LOG = registerBlock("crystalized_hardened_log", () -> new RotatedPillarBlock(log));
-
+    public static final RegistryObject<Block> PURPLE_CRYSTAL_BLOCK = registerBlock("purple_crystal_block", () -> new Block(crystal));
+    public static final RegistryObject<Block> PINK_CRYSTAL_BLOCK = registerBlock("pink_crystal_block", () -> new Block(crystal));
+    public static final RegistryObject<Block> LIGHT_PINK_CRYSTAL_BLOCK = registerBlock("light_pink_crystal_block", () -> new Block(crystal));
+    public static final RegistryObject<Block> WHITE_CRYSTAL_BLOCK = registerBlock("white_crystal_block", () -> new Block(crystal));
+    public static final RegistryObject<WallBlock> PURPLE_CRYSTAL_WALL = registerBlock("purple_crystal_wall", () -> new WallBlock(crystal));
+    public static final RegistryObject<WallBlock> PINK_CRYSTAL_WALL = registerBlock("pink_crystal_wall", () -> new WallBlock(crystal));
+    public static final RegistryObject<WallBlock> LIGHT_PINK_CRYSTAL_WALL = registerBlock("light_pink_crystal_wall", () -> new WallBlock(crystal));
+    public static final RegistryObject<WallBlock> WHITE_CRYSTAL_WALL = registerBlock("white_crystal_wall", () -> new WallBlock(crystal));
+    public static final RegistryObject<PaneBlock> PURPLE_CRYSTAL_PANE = registerBlock("purple_crystal_pane", () -> new PaneBlock(crystal));
+    public static final RegistryObject<PaneBlock> PINK_CRYSTAL_PANE = registerBlock("pink_crystal_pane", () -> new PaneBlock(crystal));
+    public static final RegistryObject<PaneBlock> LIGHT_PINK_CRYSTAL_PANE = registerBlock("light_pink_crystal_pane", () -> new PaneBlock(crystal));
+    public static final RegistryObject<PaneBlock> WHITE_CRYSTAL_PANE = registerBlock("white_crystal_pane", () -> new PaneBlock(crystal));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = ModBlocks.BLOCKS.register(name, block);

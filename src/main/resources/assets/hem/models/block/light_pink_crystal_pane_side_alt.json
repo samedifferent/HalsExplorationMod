@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glass_pane_side_alt",
+  "textures": {
+    "pane": "hem:block/light_pink_crystal_block",
+    "edge": "hem:block/light_pink_crystal_block"
+  }
+}

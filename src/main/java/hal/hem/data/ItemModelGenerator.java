@@ -17,6 +17,21 @@ public class ItemModelGenerator extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+/*        blockToItemGenerated(ModBlocks.LIGHT_PINK_CRYSTAL_BLOCK);
+        blockToItemGenerated(ModBlocks.PINK_CRYSTAL_BLOCK);
+        blockToItemGenerated(ModBlocks.PURPLE_CRYSTAL_BLOCK);
+        blockToItemGenerated(ModBlocks.WHITE_CRYSTAL_BLOCK);*/
+
+/*        toBlock(ModBlocks.PINK_CRYSTAL_BLOCK);
+        toBlock(ModBlocks.PURPLE_CRYSTAL_BLOCK);
+        toBlock(ModBlocks.LIGHT_PINK_CRYSTAL_BLOCK);
+        toBlock(ModBlocks.WHITE_CRYSTAL_BLOCK);
+
+        wall(ModBlocks.LIGHT_PINK_CRYSTAL_WALL, ModBlocks.LIGHT_PINK_CRYSTAL_BLOCK);
+        wall(ModBlocks.PINK_CRYSTAL_WALL, ModBlocks.PINK_CRYSTAL_BLOCK);
+        wall(ModBlocks.WHITE_CRYSTAL_WALL, ModBlocks.WHITE_CRYSTAL_BLOCK);
+        wall(ModBlocks.PURPLE_CRYSTAL_WALL, ModBlocks.PURPLE_CRYSTAL_BLOCK);*/
+
 /*        toBlock(ModBlocks.CRYSTALIZED_HARDENED_LOG);
         toBlock(ModBlocks.HARDENED_LOG);*/
 
@@ -99,8 +114,8 @@ public class ItemModelGenerator extends ItemModelProvider {
         return getBuilder(fence.getId().getPath()).parent(getExistingFile(mcLoc("block/fence_inventory"))).texture("texture", "block/" + planks.getId().getPath());
     }
 
-    private ItemModelBuilder wall (RegistryObject wall, RegistryObject planks) {
-        return getBuilder(wall.getId().getPath()).parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", "block/" + planks.getId().getPath());
+    private ItemModelBuilder wall (RegistryObject wall, RegistryObject texture) {
+        return getBuilder(wall.getId().getPath()).parent(getExistingFile(mcLoc("block/wall_inventory"))).texture("wall", "block/" + texture.getId().getPath());
     }
 
     private void trapdoor (RegistryObject trapdoor) {

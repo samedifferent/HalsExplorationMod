@@ -14,6 +14,7 @@ public class ClientEventHandler {
     @SubscribeEvent
     public static void init(final FMLClientSetupEvent event) {
 
+        // CUTOUT
         RenderTypeLookup.setRenderLayer(ModBlocks.BLUELEAF_SAPLING.get(), RenderType.cutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.DUSKWOOD_SAPLING.get(), RenderType.cutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.SILVERWOOD_SAPLING.get(), RenderType.cutout());
@@ -27,7 +28,23 @@ public class ClientEventHandler {
         RenderTypeLookup.setRenderLayer(ModBlocks.FLOWERING_LILY.get(), RenderType.cutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.GIANT_BLOSSOM.get(), RenderType.cutout());
 
+        // CUTOUT MIPPED
         RenderTypeLookup.setRenderLayer(ModBlocks.BLUELEAVES.get(), RenderType.cutoutMipped());
         RenderTypeLookup.setRenderLayer(ModBlocks.FLOWERING_BLUELEAVES.get(), RenderType.cutoutMipped());
+        RenderTypeLookup.setRenderLayer(ModBlocks.BLUELEAF_BUSH.get(), RenderType.cutoutMipped());
+
+        // TRANSLUCENT
+        RenderTypeLookup.setRenderLayer(ModBlocks.LIGHT_PINK_CRYSTAL_BLOCK.get(), RenderType.translucent());
+        RenderTypeLookup.setRenderLayer(ModBlocks.PINK_CRYSTAL_BLOCK.get(), RenderType.translucent());
+        RenderTypeLookup.setRenderLayer(ModBlocks.PURPLE_CRYSTAL_BLOCK.get(), RenderType.translucent());
+        RenderTypeLookup.setRenderLayer(ModBlocks.WHITE_CRYSTAL_BLOCK.get(), RenderType.translucent());
+        RenderTypeLookup.setRenderLayer(ModBlocks.LIGHT_PINK_CRYSTAL_WALL.get(), RenderType.translucent());
+        RenderTypeLookup.setRenderLayer(ModBlocks.PINK_CRYSTAL_WALL.get(), RenderType.translucent());
+        RenderTypeLookup.setRenderLayer(ModBlocks.PURPLE_CRYSTAL_WALL.get(), RenderType.translucent());
+        RenderTypeLookup.setRenderLayer(ModBlocks.WHITE_CRYSTAL_WALL.get(), RenderType.translucent());
+        RenderTypeLookup.setRenderLayer(ModBlocks.LIGHT_PINK_CRYSTAL_PANE.get(), RenderType.translucent());
+        RenderTypeLookup.setRenderLayer(ModBlocks.PINK_CRYSTAL_PANE.get(), RenderType.translucent());
+        RenderTypeLookup.setRenderLayer(ModBlocks.PURPLE_CRYSTAL_PANE.get(), RenderType.translucent());
+        RenderTypeLookup.setRenderLayer(ModBlocks.WHITE_CRYSTAL_PANE.get(), RenderType.translucent());
     }
 }

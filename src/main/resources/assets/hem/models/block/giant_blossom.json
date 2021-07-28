@@ -1,4 +1,5 @@
 {
+	"parent": "minecraft:block/block",
 	"ambientocclusion": false,
 	"texture_size": [64, 64],
 	"textures": {
@@ -188,25 +189,5 @@
 				"down": {"uv": [16, 10.5, 10.75, 15], "rotation": 90, "texture": "#0"}
 			}
 		}
-	],
-	"display": {
-		"thirdperson_righthand": {
-			"scale": [0.4, 0.4, 0.4]
-		},
-		"thirdperson_lefthand": {
-			"scale": [0.4, 0.4, 0.4]
-		},
-		"firstperson_righthand": {
-			"scale": [0.4, 0.4, 0.4]
-		},
-		"firstperson_lefthand": {
-			"scale": [0.4, 0.4, 0.4]
-		},
-		"ground": {
-			"scale": [0.4, 0.4, 0.4]
-		},
-		"gui": {
-			"translation": [0, -3.75, 0]
-		}
-	}
+	]
 }
