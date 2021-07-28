@@ -31,7 +31,10 @@ public class ModBlocks {
     public static final RegistryObject<BlueleafTallGrassBlock> BLUELEAF_MEDIUM_GRASS = registerBlock("blueleaf_medium_grass", BlueleafTallGrassBlock::new);
     public static final RegistryObject<BlueleafTallGrassBlock> BLUELEAF_SHORT_GRASS = registerBlock("blueleaf_short_grass", BlueleafTallGrassBlock::new);
     public static final RegistryObject<FloweringLilyBlock> FLOWERING_LILY = BLOCKS.register("flowering_lily", FloweringLilyBlock::new);
+    public static final RegistryObject<BlueleafTallGrassBlock> SMALL_BLOSSOM = registerBlock("small_blossom", BlueleafTallGrassBlock::new);
     public static final RegistryObject<BlueleafTallGrassBlock> GIANT_BLOSSOM = registerBlock("giant_blossom", BlueleafTallGrassBlock::new);
+    public static final RegistryObject<BlueleafTallGrassBlock> BLUELEAF_MUSHROOM = registerBlock("blueleaf_mushroom", BlueleafTallGrassBlock::new);
+    public static final RegistryObject<BlueleafTallGrassBlock> TALL_BLUELEAF_FLOWER = registerBlock("tall_blueleaf_flower", BlueleafTallGrassBlock::new);
     public static final RegistryObject<BronziumCrystalBlock> BRONZIUM_CRYSTAL = registerBlock("bronzium_crystal", BronziumCrystalBlock::new);
     public static final RegistryObject<Block> ROSE_COPPER_ORE = registerBlock("rose_copper_ore", () -> new Block(AbstractBlock.Properties.copy(Blocks.DIAMOND_ORE)));
     public static final RegistryObject<BlueleafWheatBlock> BLUELEAF_WHEAT = registerBlock("blueleaf_wheat", BlueleafWheatBlock::new);

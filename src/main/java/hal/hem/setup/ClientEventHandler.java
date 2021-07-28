@@ -27,6 +27,9 @@ public class ClientEventHandler {
         RenderTypeLookup.setRenderLayer(ModBlocks.BRONZIUM_CRYSTAL.get(), RenderType.cutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.FLOWERING_LILY.get(), RenderType.cutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.GIANT_BLOSSOM.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.SMALL_BLOSSOM.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.BLUELEAF_MUSHROOM.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.TALL_BLUELEAF_FLOWER.get(), RenderType.cutout());
 
         // CUTOUT MIPPED
         RenderTypeLookup.setRenderLayer(ModBlocks.BLUELEAVES.get(), RenderType.cutoutMipped());

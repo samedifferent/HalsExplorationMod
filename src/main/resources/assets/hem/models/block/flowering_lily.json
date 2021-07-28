@@ -1,9 +1,10 @@
 {
+	"parent": "minecraft:block/block",
 	"ambientocclusion": false,
 	"texture_size": [64, 64],
 	"textures": {
 		"0": "hem:block/flowering_lily",
-		"particle": "minecraft:block/pink_tulip"
+		"particle": "hem:block/flowering_lily"
 	},
 	"elements": [
 		{
@@ -136,34 +137,5 @@
 				"down": {"uv": [16, 10.5, 10.75, 15], "rotation": 90, "texture": "#0"}
 			}
 		}
-	],
-	"display": {
-		"thirdperson_righthand": {
-			"rotation": [90, 0, 0],
-			"translation": [0, -2, 0],
-			"scale": [0.4, 0.4, 0.4]
-		},
-		"thirdperson_lefthand": {
-			"rotation": [90, 0, 0],
-			"translation": [0, -2, 0],
-			"scale": [0.4, 0.4, 0.4]
-		},
-		"firstperson_righthand": {
-			"rotation": [0, 62, 0],
-			"translation": [0.5, 2.75, -3.25],
-			"scale": [0.45, 0.45, 0.45]
-		},
-		"ground": {
-			"scale": [0.4, 0.4, 0.4]
-		},
-		"gui": {
-			"rotation": [28, 40, 0],
-			"scale": [0.4, 0.4, 0.4]
-		},
-		"fixed": {
-			"rotation": [-90, 0, 0],
-			"translation": [0, 0, -3],
-			"scale": [0.4, 0.4, 0.4]
-		}
-	}
+	]
 }
