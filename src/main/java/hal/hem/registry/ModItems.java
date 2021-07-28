@@ -2,8 +2,10 @@ package hal.hem.registry;
 
 import hal.hem.HEM;
 import hal.hem.item.AirshipItem;
+import hal.hem.item.ModItemTier;
 import net.minecraft.item.Item;
 import net.minecraft.item.LilyPadItem;
+import net.minecraft.item.SwordItem;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -18,5 +20,5 @@ public class ModItems {
     public static final RegistryObject<Item> BOILER = ITEMS.register("boiler", () -> new Item(new Item.Properties().tab(HEM.TAB)));
     public static final RegistryObject<Item> CIRCUIT_BOARD = ITEMS.register("circuit_board", () -> new Item(new Item.Properties().tab(HEM.TAB)));
     public static final RegistryObject<Item> FLOWERING_LILY = ITEMS.register("flowering_lily", () -> new LilyPadItem(ModBlocks.FLOWERING_LILY.get(), new Item.Properties().tab(HEM.TAB)));
-
+    public static final RegistryObject<Item> ANCIENT_BLADE = ITEMS.register("ancient_blade", () -> new SwordItem(ModItemTier.COPPARITE, 3, -2.4F, new Item.Properties().tab(HEM.TAB)));
 }
