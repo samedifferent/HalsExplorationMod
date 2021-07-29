@@ -63,7 +63,7 @@ public class ModBlocks {
     // SILVERWOOD
     public static final RegistryObject<RotatedPillarBlock> SILVERWOOD_LOG = registerBlock("silverwood_log", () -> new RotatedPillarBlock(log));
     public static final RegistryObject<SaplingBlock> SILVERWOOD_SAPLING = registerBlock("silverwood_sapling", () -> new SaplingBlock(new OakTree(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
-    public static final RegistryObject<SmallSilverwoodTreeBlock> SMALL_SILVERWOOD_TREE = registerBlock("small_silverwood_tree", SmallSilverwoodTreeBlock::new);
+    public static final RegistryObject<SmallTreeBlock> SMALL_SILVERWOOD_TREE_TOP = registerBlock("small_silverwood_tree_top", SmallTreeBlock::new);
     public static final RegistryObject<Block> SILVERWOOD_PLANKS = registerBlock("silverwood_planks", () -> new Block(planks));
     public static final RegistryObject<SlabBlock> SILVERWOOD_SLAB = registerBlock("silverwood_slab", () -> new SlabBlock(planks));
     public static final RegistryObject<StairsBlock> SILVERWOOD_STAIRS = registerBlock("silverwood_stairs", () -> new StairsBlock(Blocks.OAK_PLANKS::defaultBlockState, planks));

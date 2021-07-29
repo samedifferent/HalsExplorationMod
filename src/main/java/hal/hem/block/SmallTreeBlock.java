@@ -6,8 +6,8 @@ import net.minecraft.block.material.Material;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 
-public class SmallSilverwoodTreeBlock extends BushBlock {
-    public SmallSilverwoodTreeBlock() {
+public class SmallTreeBlock extends BushBlock {
+    public SmallTreeBlock() {
         super(AbstractBlock.Properties.of(Material.WOOD).noOcclusion().strength(2.0F).sound(SoundType.WOOD).lightLevel((light) -> 1));
     }
 

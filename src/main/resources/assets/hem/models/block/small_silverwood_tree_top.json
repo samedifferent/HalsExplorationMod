@@ -2,8 +2,8 @@
 	"parent": "minecraft:block/block",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "hem:block/small_silverwood_tree",
-		"particle": "hem:block/small_silverwood_tree"
+		"0": "hem:block/small_silverwood_tree_top",
+		"particle": "hem:block/small_silverwood_tree_top"
 	},
 	"elements": [
 		{
