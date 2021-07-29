@@ -1,0 +1,22 @@
+{
+	"parent": "minecraft:block/block",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "hem:block/generator_pipe",
+		"particle": "hem:block/generator_pipe"
+	},
+	"elements": [
+		{
+			"from": [5, 3, 0],
+			"to": [11, 8, 16],
+			"faces": {
+				"north": {"uv": [8.5, 4, 11.5, 6.5], "texture": "#0"},
+				"east": {"uv": [0, 8.5, 8, 11], "texture": "#0"},
+				"south": {"uv": [8.5, 4, 11.5, 6.5], "texture": "#0"},
+				"west": {"uv": [0, 8.5, 8, 11], "texture": "#0"},
+				"up": {"uv": [3.5, 8, 0.5, 0], "texture": "#0"},
+				"down": {"uv": [3.5, 0, 0.5, 8], "texture": "#0"}
+			}
+		}
+	]
+}

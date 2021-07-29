@@ -108,6 +108,9 @@ public class ModBlocks {
     public static final RegistryObject<PaneBlock> LIGHT_PINK_CRYSTAL_PANE = registerBlock("light_pink_crystal_pane", () -> new PaneBlock(crystal));
     public static final RegistryObject<PaneBlock> WHITE_CRYSTAL_PANE = registerBlock("white_crystal_pane", () -> new PaneBlock(crystal));
 
+    // GENERATOR
+    public static final RegistryObject<GeneratorPipeBlock> GENERATOR_PIPE = registerBlock("generator_pipe", GeneratorPipeBlock::new);
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = ModBlocks.BLOCKS.register(name, block);
         ModItems.ITEMS.register(name, () -> new BlockItem(toReturn.get(), new Item.Properties().tab(HEM.TAB)));

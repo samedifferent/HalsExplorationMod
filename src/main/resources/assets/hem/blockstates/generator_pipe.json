@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "hem:block/generator_pipe",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "hem:block/generator_pipe"
+    },
+    "facing=south": {
+      "model": "hem:block/generator_pipe",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "hem:block/generator_pipe",
+      "y": 270
+    }
+  }
+}
