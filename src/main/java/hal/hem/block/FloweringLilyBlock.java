@@ -10,7 +10,7 @@ public class FloweringLilyBlock extends LilyPadBlock {
     protected static final VoxelShape SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 3.0D, 16.0D);
 
     public FloweringLilyBlock() {
-        super(AbstractBlock.Properties.copy(Blocks.LILY_PAD));
+        super(AbstractBlock.Properties.copy(Blocks.LILY_PAD).lightLevel((light) -> 1));
     }
 
     @Override

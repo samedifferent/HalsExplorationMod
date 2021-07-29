@@ -20,7 +20,7 @@ public class ModBlocks {
     // PROPERTIES
     static AbstractBlock.Properties planks = AbstractBlock.Properties.copy(Blocks.OAK_PLANKS);
     static AbstractBlock.Properties log = AbstractBlock.Properties.copy(Blocks.OAK_LOG);
-    static AbstractBlock.Properties leaves = AbstractBlock.Properties.copy(Blocks.OAK_LEAVES);
+    static AbstractBlock.Properties leaves = AbstractBlock.Properties.copy(Blocks.OAK_LEAVES).lightLevel((light) -> 1);
     static AbstractBlock.Properties crystal = AbstractBlock.Properties.of(Material.GLASS, MaterialColor.COLOR_PURPLE).strength(1.0F).sound(SoundType.GLASS).noOcclusion();
 
     // ENVIRONMENT
@@ -31,10 +31,10 @@ public class ModBlocks {
     public static final RegistryObject<BlueleafTallGrassBlock> BLUELEAF_MEDIUM_GRASS = registerBlock("blueleaf_medium_grass", BlueleafTallGrassBlock::new);
     public static final RegistryObject<BlueleafTallGrassBlock> BLUELEAF_SHORT_GRASS = registerBlock("blueleaf_short_grass", BlueleafTallGrassBlock::new);
     public static final RegistryObject<FloweringLilyBlock> FLOWERING_LILY = BLOCKS.register("flowering_lily", FloweringLilyBlock::new);
-    public static final RegistryObject<BlueleafTallGrassBlock> SMALL_BLOSSOM = registerBlock("small_blossom", BlueleafTallGrassBlock::new);
-    public static final RegistryObject<BlueleafTallGrassBlock> GIANT_BLOSSOM = registerBlock("giant_blossom", BlueleafTallGrassBlock::new);
-    public static final RegistryObject<BlueleafTallGrassBlock> BLUELEAF_MUSHROOM = registerBlock("blueleaf_mushroom", BlueleafTallGrassBlock::new);
-    public static final RegistryObject<BlueleafTallGrassBlock> TALL_BLUELEAF_FLOWER = registerBlock("tall_blueleaf_flower", BlueleafTallGrassBlock::new);
+    public static final RegistryObject<BlueleafPlantBlock> SMALL_BLOSSOM = registerBlock("small_blossom", BlueleafPlantBlock::new);
+    public static final RegistryObject<BlueleafPlantBlock> GIANT_BLOSSOM = registerBlock("giant_blossom", BlueleafPlantBlock::new);
+    public static final RegistryObject<BlueleafPlantBlock> BLUELEAF_MUSHROOM = registerBlock("blueleaf_mushroom", BlueleafPlantBlock::new);
+    public static final RegistryObject<BlueleafPlantBlock> TALL_BLUELEAF_FLOWER = registerBlock("tall_blueleaf_flower", BlueleafPlantBlock::new);
     public static final RegistryObject<BronziumCrystalBlock> BRONZIUM_CRYSTAL = registerBlock("bronzium_crystal", BronziumCrystalBlock::new);
     public static final RegistryObject<Block> ROSE_COPPER_ORE = registerBlock("rose_copper_ore", () -> new Block(AbstractBlock.Properties.copy(Blocks.DIAMOND_ORE)));
     public static final RegistryObject<BlueleafWheatBlock> BLUELEAF_WHEAT = registerBlock("blueleaf_wheat", BlueleafWheatBlock::new);
@@ -51,6 +51,7 @@ public class ModBlocks {
     public static final RegistryObject<LeavesBlock> FLOWERING_BLUELEAVES = registerBlock("flowering_blueleaves", () -> new LeavesBlock(leaves));
     public static final RegistryObject<RotatedPillarBlock> BLUELEAF_LOG = registerBlock("blueleaf_log", () -> new RotatedPillarBlock(log));
     public static final RegistryObject<SaplingBlock> BLUELEAF_SAPLING = registerBlock("blueleaf_sapling", () -> new SaplingBlock(new OakTree(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
+
     public static final RegistryObject<Block> BLUELEAF_PLANKS = registerBlock("blueleaf_planks", () -> new Block(planks));
     public static final RegistryObject<SlabBlock> BLUELEAF_SLAB = registerBlock("blueleaf_slab", () -> new SlabBlock(planks));
     public static final RegistryObject<StairsBlock> BLUELEAF_STAIRS = registerBlock("blueleaf_stairs", () -> new StairsBlock(Blocks.OAK_PLANKS::defaultBlockState, planks));
@@ -62,6 +63,7 @@ public class ModBlocks {
     // SILVERWOOD
     public static final RegistryObject<RotatedPillarBlock> SILVERWOOD_LOG = registerBlock("silverwood_log", () -> new RotatedPillarBlock(log));
     public static final RegistryObject<SaplingBlock> SILVERWOOD_SAPLING = registerBlock("silverwood_sapling", () -> new SaplingBlock(new OakTree(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<SmallSilverwoodTreeBlock> SMALL_SILVERWOOD_TREE = registerBlock("small_silverwood_tree", SmallSilverwoodTreeBlock::new);
     public static final RegistryObject<Block> SILVERWOOD_PLANKS = registerBlock("silverwood_planks", () -> new Block(planks));
     public static final RegistryObject<SlabBlock> SILVERWOOD_SLAB = registerBlock("silverwood_slab", () -> new SlabBlock(planks));
     public static final RegistryObject<StairsBlock> SILVERWOOD_STAIRS = registerBlock("silverwood_stairs", () -> new StairsBlock(Blocks.OAK_PLANKS::defaultBlockState, planks));

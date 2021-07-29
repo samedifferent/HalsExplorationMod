@@ -35,6 +35,7 @@ public class ClientEventHandler {
         RenderTypeLookup.setRenderLayer(ModBlocks.BLUELEAVES.get(), RenderType.cutoutMipped());
         RenderTypeLookup.setRenderLayer(ModBlocks.FLOWERING_BLUELEAVES.get(), RenderType.cutoutMipped());
         RenderTypeLookup.setRenderLayer(ModBlocks.BLUELEAF_BUSH.get(), RenderType.cutoutMipped());
+        RenderTypeLookup.setRenderLayer(ModBlocks.SMALL_SILVERWOOD_TREE.get(), RenderType.cutoutMipped());
 
         // TRANSLUCENT
         RenderTypeLookup.setRenderLayer(ModBlocks.LIGHT_PINK_CRYSTAL_BLOCK.get(), RenderType.translucent());
