@@ -3,6 +3,7 @@ package hal.hem.registry;
 import hal.hem.HEM;
 import hal.hem.item.AirshipItem;
 import hal.hem.item.ModItemTier;
+import hal.hem.item.ShotgunShellItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.LilyPadItem;
 import net.minecraft.item.SwordItem;
@@ -21,4 +22,6 @@ public class ModItems {
     public static final RegistryObject<Item> CIRCUIT_BOARD = ITEMS.register("circuit_board", () -> new Item(new Item.Properties().tab(HEM.TAB)));
     public static final RegistryObject<Item> FLOWERING_LILY = ITEMS.register("flowering_lily", () -> new LilyPadItem(ModBlocks.FLOWERING_LILY.get(), new Item.Properties().tab(HEM.TAB)));
     public static final RegistryObject<Item> ANCIENT_BLADE = ITEMS.register("ancient_blade", () -> new SwordItem(ModItemTier.COPPARITE, 3, -2.4F, new Item.Properties().tab(HEM.TAB)));
+    public static final RegistryObject<Item> SHOTGUN_SHELL = ITEMS.register("shotgun_shell", ShotgunShellItem::new);
+
 }
