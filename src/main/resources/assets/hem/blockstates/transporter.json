@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=north,half=lower": {
+      "model": "hem:block/transporter_bottom",
+      "y": 180
+    },
+    "facing=north,half=upper": {
+      "model": "hem:block/transporter_top",
+      "y": 180
+    },
+    "facing=east,half=lower": {
+      "model": "hem:block/transporter_bottom",
+      "y": 270
+    },
+    "facing=east,half=upper": {
+      "model": "hem:block/transporter_top",
+      "y": 270
+    },
+    "facing=south,half=lower": {
+      "model": "hem:block/transporter_bottom"
+    },
+    "facing=south,half=upper": {
+      "model": "hem:block/transporter_top"
+    },
+    "facing=west,half=lower": {
+      "model": "hem:block/transporter_bottom",
+      "y": 90
+    },
+    "facing=west,half=upper": {
+      "model": "hem:block/transporter_top",
+      "y": 90
+    }
+  }
+}
