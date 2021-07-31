@@ -35,6 +35,7 @@ public class ClientEventHandler {
         RenderTypeLookup.setRenderLayer(ModBlocks.SMALL_BLUELEAF_TREE_MIDDLE.get(), RenderType.cutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.SMALL_BLUELEAF_TREE_MIDDLE_LEAVES.get(), RenderType.cutout());
         RenderTypeLookup.setRenderLayer(ModBlocks.SMALL_BLUELEAF_TREE_TOP.get(), RenderType.cutout());
+        RenderTypeLookup.setRenderLayer(ModBlocks.GENERATOR.get(), RenderType.cutout());
 
         // CUTOUT MIPPED
         RenderTypeLookup.setRenderLayer(ModBlocks.BLUELEAVES.get(), RenderType.cutoutMipped());
