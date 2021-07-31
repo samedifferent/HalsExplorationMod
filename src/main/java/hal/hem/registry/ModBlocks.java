@@ -118,6 +118,7 @@ public class ModBlocks {
     public static final RegistryObject<GeneratorPipeBlock> GENERATOR_PIPE = registerBlock("generator_pipe", GeneratorPipeBlock::new);
     public static final RegistryObject<TransporterBlock> TRANSPORTER = registerBlock("transporter", TransporterBlock::new);
     public static final RegistryObject<GeneratorBlock> GENERATOR = registerBlock("generator", GeneratorBlock::new);
+    public static final RegistryObject<T1ComputerBlock> T1_COMPUTER = registerBlock("t1_computer", T1ComputerBlock::new);
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = ModBlocks.BLOCKS.register(name, block);
