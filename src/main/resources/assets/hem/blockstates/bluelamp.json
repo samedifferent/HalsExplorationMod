@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "hem:block/bluelamp"
+    },
+    "hanging=true": {
+      "model": "hem:block/bluelamp_hanging"
+    }
+  }
+}
