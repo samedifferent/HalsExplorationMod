@@ -1,7 +1,6 @@
 package hal.hem;
 
-import hal.hem.registry.ModBlocks;
-import hal.hem.registry.ModItems;
+import hal.hem.registry.*;
 import hal.hem.world.gen.feature.OreGeneration;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -31,6 +30,9 @@ public class HEM {
 
         ModBlocks.BLOCKS.register(bus);
         ModItems.ITEMS.register(bus);
+        ModEntityTypes.ENTITIES.register(bus);
+        ModBiomes.BIOMES.register(bus);
+        ModBiomes.registerBiomes();
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::modSetup);
         MinecraftForge.EVENT_BUS.register(this);

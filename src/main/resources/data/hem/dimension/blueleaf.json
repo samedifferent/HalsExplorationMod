@@ -80,17 +80,7 @@
       },
       "biomes": [
         {
-          "biome": "minecraft:plains",
-          "parameters": {
-            "altitude": 0,
-            "temperature": 0,
-            "humidity": 0,
-            "weirdness": 0,
-            "offset": 0
-          }
-        },
-        {
-          "biome": "minecraft:flower_forest",
+          "biome": "hem:blueleaf_plains",
           "parameters": {
             "altitude": 0,
             "temperature": 0,
