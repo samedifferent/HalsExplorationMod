@@ -78,6 +78,7 @@ public class ModBlocks {
     public static final RegistryObject<WallBlock> SILVERWOOD_WALL = registerBlock("silverwood_wall", () -> new WallBlock(planks));
 
     // DUSKWOOD
+    public static final RegistryObject<LeavesBlock> DUSKWOOD_LEAVES = registerBlock("duskwood_leaves", () -> new LeavesBlock(leaves));
     public static final RegistryObject<RotatedPillarBlock> DUSKWOOD_LOG = registerBlock("duskwood_log", () -> new RotatedPillarBlock(log));
     public static final RegistryObject<SaplingBlock> DUSKWOOD_SAPLING = registerBlock("duskwood_sapling", () -> new SaplingBlock(new OakTree(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
     public static final RegistryObject<Block> DUSKWOOD_PLANKS = registerBlock("duskwood_planks", () -> new Block(planks));
