@@ -38,13 +38,13 @@ public class ModBlocks {
     public static final RegistryObject<BronziumCrystalBlock> BRONZIUM_CRYSTAL = registerBlock("bronzium_crystal", BronziumCrystalBlock::new);
     public static final RegistryObject<Block> ROSE_COPPER_ORE = registerBlock("rose_copper_ore", () -> new Block(AbstractBlock.Properties.copy(Blocks.DIAMOND_ORE)));
     public static final RegistryObject<BlueleafWheatBlock> BLUELEAF_WHEAT = registerBlock("blueleaf_wheat", BlueleafWheatBlock::new);
-/*    public static final RegistryObject<Block> BLUEROCK = registerBlock("bluerock", () -> new Block(AbstractBlock.Properties.copy(Blocks.STONE)));
+    public static final RegistryObject<Block> BLUEROCK = registerBlock("bluerock", () -> new Block(AbstractBlock.Properties.copy(Blocks.STONE)));
     public static final RegistryObject<SlabBlock> BLUEROCK_SLAB = registerBlock("bluerock_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.STONE_SLAB)));
     public static final RegistryObject<StairsBlock> BLUEROCK_STAIRS = registerBlock("bluerock_stairs", () -> new StairsBlock(Blocks.STONE::defaultBlockState, AbstractBlock.Properties.copy(Blocks.STONE_STAIRS)));
     public static final RegistryObject<Block> COBBLED_BLUEROCK = registerBlock("cobbled_bluerock", () -> new Block(AbstractBlock.Properties.copy(Blocks.COBBLESTONE)));
     public static final RegistryObject<SlabBlock> COBBLED_BLUEROCK_SLAB = registerBlock("cobbled_bluerock_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.COBBLESTONE_SLAB)));
     public static final RegistryObject<StairsBlock> COBBLED_BLUEROCK_STAIRS = registerBlock("cobbled_bluerock_stairs", () -> new StairsBlock(Blocks.COBBLESTONE::defaultBlockState, AbstractBlock.Properties.copy(Blocks.COBBLESTONE_STAIRS)));
-    public static final RegistryObject<WallBlock> COBBLED_BLUEROCK_WALL = registerBlock("cobbled_bluerock_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.COBBLESTONE_WALL)));*/
+    public static final RegistryObject<WallBlock> COBBLED_BLUEROCK_WALL = registerBlock("cobbled_bluerock_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.COBBLESTONE_WALL)));
 
     // BLUELEAF WOOD
     public static final RegistryObject<LeavesBlock> BLUELEAVES = registerBlock("blueleaves", () -> new LeavesBlock(leaves));
