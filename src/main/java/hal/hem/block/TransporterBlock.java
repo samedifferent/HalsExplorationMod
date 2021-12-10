@@ -1,5 +1,8 @@
 package hal.hem.block;
 
+import hal.hem.registry.ModBlocks;
+import hal.hem.registry.ModDimensions;
+import hal.hem.world.dimension.BlueleafTeleporter;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
@@ -8,15 +11,20 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.ItemStack;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.state.EnumProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.state.properties.DoubleBlockHalf;
+import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Direction;
+import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
 
 import javax.annotation.Nullable;
 
@@ -90,5 +98,34 @@ public class TransporterBlock extends HorizontalBlock {
     @Override
     protected void createBlockStateDefinition(StateContainer.Builder<Block, BlockState> builder) {
         builder.add(HALF, FACING);
+    }
+
+    @Override
+    public ActionResultType use(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult hit) {
+        if (!world.isClientSide) {
+            if (!player.isCrouching()) {
+                BlockPos computerPos = pos.east();
+                BlockPos pipe1Pos = pos.west();
+                BlockPos pipe2Pos = pipe1Pos.west();
+                BlockPos generatorPos = pipe2Pos.west();
+                MinecraftServer server = world.getServer();
+                if (server != null) {
+                    if (world.dimension() == ModDimensions.BLUELEAF_WORLD) {
+                        ServerWorld overworld = server.getLevel(World.OVERWORLD);
+                        if (overworld != null) {
+                            player.changeDimension(overworld, new BlueleafTeleporter(pos, false));
+                        }
+                    } else {
+                        ServerWorld blueleaf = server.getLevel(ModDimensions.BLUELEAF_WORLD);
+                        if (blueleaf != null) {
+                            player.changeDimension(blueleaf, new BlueleafTeleporter(pos, true));
+                        }
+                    }
+                    return ActionResultType.SUCCESS;
+                }
+            }
+        }
+
+        return super.use(state, world, pos, player, hand, hit);
     }
 }
