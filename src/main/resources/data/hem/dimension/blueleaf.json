@@ -10,7 +10,7 @@
       "sea_level": 63,
       "disable_mob_generation": false,
       "default_block": {
-        "Name": "minecraft:stone"
+        "Name": "hem:bluerock"
       },
       "default_fluid": {
         "Name": "minecraft:water",

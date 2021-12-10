@@ -1,10 +1,14 @@
 package hal.hem.setup;
 
 import hal.hem.HEM;
+import hal.hem.particle.FallingParticle;
 import hal.hem.registry.ModBlocks;
+import hal.hem.registry.ModParticleTypes;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.ParticleFactoryRegisterEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -60,5 +64,10 @@ public class ClientEventHandler {
         RenderTypeLookup.setRenderLayer(ModBlocks.PINK_CRYSTAL_PANE.get(), RenderType.translucent());
         RenderTypeLookup.setRenderLayer(ModBlocks.PURPLE_CRYSTAL_PANE.get(), RenderType.translucent());
         RenderTypeLookup.setRenderLayer(ModBlocks.WHITE_CRYSTAL_PANE.get(), RenderType.translucent());
+    }
+
+    @SubscribeEvent
+    public static void registerFactory(ParticleFactoryRegisterEvent event) {
+        Minecraft.getInstance().particleEngine.register(ModParticleTypes.FALLING_BLUELEAF.get(), FallingParticle.FallingBlueleafFactory::new);
     }
 }

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:mountain",
+  "config": {
+    "top_material": {
+      "Name": "minecraft:snow_block"
+    },
+    "under_material": {
+      "Name": "hem:bluerock"
+    },
+    "underwater_material": {
+      "Name": "hem:bluerock"
+    }
+  }
+}

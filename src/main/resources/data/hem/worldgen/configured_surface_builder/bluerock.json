@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:default",
+  "config": {
+    "top_material": {
+      "Name": "hem:bluerock"
+    },
+    "under_material": {
+      "Name": "hem:bluerock"
+    },
+    "underwater_material": {
+      "Name": "hem:bluerock"
+    }
+  }
+}

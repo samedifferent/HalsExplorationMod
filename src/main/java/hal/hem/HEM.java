@@ -32,6 +32,7 @@ public class HEM {
         ModItems.ITEMS.register(bus);
         ModEntityTypes.ENTITIES.register(bus);
         ModBiomes.BIOMES.register(bus);
+        ModParticleTypes.PARTICLE_TYPES.register(bus);
         ModBiomes.registerBiomes();
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::modSetup);
