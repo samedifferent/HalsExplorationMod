@@ -1,11 +1,13 @@
 package hal.hem.world.dimension;
 
+import hal.hem.block.GeneratorPipeBlock;
 import hal.hem.block.TransporterBlock;
 import hal.hem.registry.ModBlocks;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.state.properties.DoubleBlockHalf;
+import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.common.util.ITeleporter;
@@ -42,7 +44,7 @@ public class BlueleafTeleporter implements ITeleporter {
             tries++;
         }
 
-        entity.teleportTo(destinationPos.getX(), destinationPos.getY(), destinationPos.getZ());
+        entity.teleportTo(destinationPos.getX() + 1, destinationPos.getY(), destinationPos.getZ());
 
         if (insideDimension) {
             boolean doSetBlock = true;
@@ -55,6 +57,10 @@ public class BlueleafTeleporter implements ITeleporter {
             if (doSetBlock) {
                 destinationWorld.setBlockAndUpdate(destinationPos, ModBlocks.TRANSPORTER.get().defaultBlockState());
                 destinationWorld.setBlockAndUpdate(destinationPos.above(), ModBlocks.TRANSPORTER.get().defaultBlockState().setValue(TransporterBlock.HALF, DoubleBlockHalf.UPPER));
+                destinationWorld.setBlockAndUpdate(destinationPos.east(), ModBlocks.T1_COMPUTER.get().defaultBlockState());
+                destinationWorld.setBlockAndUpdate(destinationPos.west(), ModBlocks.GENERATOR_PIPE.get().defaultBlockState().setValue(GeneratorPipeBlock.FACING, Direction.EAST));
+                destinationWorld.setBlockAndUpdate(destinationPos.west(2), ModBlocks.GENERATOR_PIPE.get().defaultBlockState().setValue(GeneratorPipeBlock.FACING, Direction.EAST));
+                destinationWorld.setBlockAndUpdate(destinationPos.west(3), ModBlocks.GENERATOR.get().defaultBlockState());
             }
         }
 

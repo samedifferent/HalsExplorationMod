@@ -1,7 +1,7 @@
 package hal.hem.setup;
 
 import hal.hem.HEM;
-import hal.hem.world.gen.feature.OreGeneration;
+import hal.hem.world.gen.feature.OreFeature;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -12,6 +12,6 @@ public class CommonEventHandler {
 
     @SubscribeEvent
     public static void biomeModification(BiomeLoadingEvent event) {
-        event.getGeneration().getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).add(() -> OreGeneration.ROSE_COPPER_ORE);
+        event.getGeneration().getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).add(() -> OreFeature.ROSE_COPPER_ORE);
     }
 }

@@ -1,7 +1,7 @@
 package hal.hem;
 
 import hal.hem.registry.*;
-import hal.hem.world.gen.feature.OreGeneration;
+import hal.hem.world.gen.feature.OreFeature;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -40,6 +40,6 @@ public class HEM {
     }
 
     private void modSetup(final FMLCommonSetupEvent event) {
-        event.enqueueWork(OreGeneration::registerOreFeatures);
+        event.enqueueWork(OreFeature::registerOreFeatures);
     }
 }

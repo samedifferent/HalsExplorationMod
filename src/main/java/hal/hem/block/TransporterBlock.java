@@ -104,24 +104,26 @@ public class TransporterBlock extends HorizontalBlock {
     public ActionResultType use(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult hit) {
         if (!world.isClientSide) {
             if (!player.isCrouching()) {
-                BlockPos computerPos = pos.east();
-                BlockPos pipe1Pos = pos.west();
-                BlockPos pipe2Pos = pipe1Pos.west();
-                BlockPos generatorPos = pipe2Pos.west();
+                BlockState computerFlag = world.getBlockState(pos.east());
+                BlockState pipe1Flag = world.getBlockState(pos.west());
+                BlockState pipe2Flag = world.getBlockState(pos.west(2));
+                BlockState generatorFlag = world.getBlockState(pos.west(3));
                 MinecraftServer server = world.getServer();
                 if (server != null) {
-                    if (world.dimension() == ModDimensions.BLUELEAF_WORLD) {
-                        ServerWorld overworld = server.getLevel(World.OVERWORLD);
-                        if (overworld != null) {
-                            player.changeDimension(overworld, new BlueleafTeleporter(pos, false));
+                    if (computerFlag.is(ModBlocks.T1_COMPUTER.get()) && pipe1Flag.is(ModBlocks.GENERATOR_PIPE.get()) && pipe2Flag.is(ModBlocks.GENERATOR_PIPE.get()) && generatorFlag.is(ModBlocks.GENERATOR.get())) {
+                        if (world.dimension() == ModDimensions.BLUELEAF_WORLD) {
+                            ServerWorld overworld = server.getLevel(World.OVERWORLD);
+                            if (overworld != null) {
+                                player.changeDimension(overworld, new BlueleafTeleporter(pos, false));
+                            }
+                        } else {
+                            ServerWorld blueleaf = server.getLevel(ModDimensions.BLUELEAF_WORLD);
+                            if (blueleaf != null) {
+                                player.changeDimension(blueleaf, new BlueleafTeleporter(pos, true));
+                            }
                         }
-                    } else {
-                        ServerWorld blueleaf = server.getLevel(ModDimensions.BLUELEAF_WORLD);
-                        if (blueleaf != null) {
-                            player.changeDimension(blueleaf, new BlueleafTeleporter(pos, true));
-                        }
+                        return ActionResultType.SUCCESS;
                     }
-                    return ActionResultType.SUCCESS;
                 }
             }
         }
