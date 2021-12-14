@@ -1,5 +1,5 @@
 {
-  "surface_builder": "hem:bluegrass",
+  "surface_builder": "hem:blueleaf_plains",
   "depth": 0.1,
   "scale": 0.2,
   "temperature": 0.5,
@@ -22,7 +22,7 @@
     },
     "particle": {
       "options": {
-        "type": "hem:falling_blueleaf"
+        "type": "hem:blueleaf_spore"
       },
       "probability": 0.015
     }

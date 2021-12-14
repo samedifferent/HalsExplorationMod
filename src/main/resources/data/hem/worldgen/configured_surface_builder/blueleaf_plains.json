@@ -1,0 +1,14 @@
+{
+  "type": "hem:blueleaf_plains",
+  "config": {
+    "top_material": {
+      "Name": "hem:blueleaf_grass_block"
+    },
+    "under_material": {
+      "Name": "hem:blueleaf_dirt"
+    },
+    "underwater_material": {
+      "Name": "hem:blueleaf_dirt"
+    }
+  }
+}

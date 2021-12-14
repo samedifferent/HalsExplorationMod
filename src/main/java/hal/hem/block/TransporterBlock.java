@@ -110,7 +110,7 @@ public class TransporterBlock extends HorizontalBlock {
                 BlockState generatorFlag = world.getBlockState(pos.west(3));
                 MinecraftServer server = world.getServer();
                 if (server != null) {
-                    if (computerFlag.is(ModBlocks.T1_COMPUTER.get()) && pipe1Flag.is(ModBlocks.GENERATOR_PIPE.get()) && pipe2Flag.is(ModBlocks.GENERATOR_PIPE.get()) && generatorFlag.is(ModBlocks.GENERATOR.get())) {
+                    if (!(computerFlag.is(ModBlocks.T1_COMPUTER.get()) && pipe1Flag.is(ModBlocks.GENERATOR_PIPE.get()) && pipe2Flag.is(ModBlocks.GENERATOR_PIPE.get()) && generatorFlag.is(ModBlocks.GENERATOR.get()))) {
                         if (world.dimension() == ModDimensions.BLUELEAF_WORLD) {
                             ServerWorld overworld = server.getLevel(World.OVERWORLD);
                             if (overworld != null) {

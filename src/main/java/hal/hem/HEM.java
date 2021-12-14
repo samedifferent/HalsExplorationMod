@@ -1,9 +1,10 @@
 package hal.hem;
 
 import hal.hem.registry.*;
-import hal.hem.world.gen.feature.OreFeature;
+import hal.hem.world.gen.feature.ModFeatures;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.registry.Registry;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -33,13 +34,9 @@ public class HEM {
         ModEntityTypes.ENTITIES.register(bus);
         ModBiomes.BIOMES.register(bus);
         ModParticleTypes.PARTICLE_TYPES.register(bus);
+        ModSurfaceBuilders.SURFACE_BUILDERS.register(bus);
         ModBiomes.registerBiomes();
 
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::modSetup);
         MinecraftForge.EVENT_BUS.register(this);
-    }
-
-    private void modSetup(final FMLCommonSetupEvent event) {
-        event.enqueueWork(OreFeature::registerOreFeatures);
     }
 }

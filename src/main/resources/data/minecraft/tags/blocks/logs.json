@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "hem:blueleaf_log",
+    "hem:silverwood_log",
+    "hem:duskwood_log",
+    "hem:hardened_log"
+  ]
+}

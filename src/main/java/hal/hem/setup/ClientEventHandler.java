@@ -1,10 +1,14 @@
 package hal.hem.setup;
 
 import hal.hem.HEM;
-import hal.hem.particle.FallingParticle;
+import hal.hem.particle.BlossomParticle;
+import hal.hem.particle.BlueleafSporeParticle;
+import hal.hem.particle.FallingBlueleafParticle;
+import hal.hem.particle.HeavySnowParticle;
 import hal.hem.registry.ModBlocks;
 import hal.hem.registry.ModParticleTypes;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.particle.UnderwaterParticle;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.api.distmarker.Dist;
@@ -68,6 +72,9 @@ public class ClientEventHandler {
 
     @SubscribeEvent
     public static void registerFactory(ParticleFactoryRegisterEvent event) {
-        Minecraft.getInstance().particleEngine.register(ModParticleTypes.FALLING_BLUELEAF.get(), FallingParticle.FallingBlueleafFactory::new);
+        Minecraft.getInstance().particleEngine.register(ModParticleTypes.FALLING_BLUELEAF.get(), FallingBlueleafParticle.Factory::new);
+        Minecraft.getInstance().particleEngine.register(ModParticleTypes.HEAVY_SNOW.get(), HeavySnowParticle.Factory::new);
+        Minecraft.getInstance().particleEngine.register(ModParticleTypes.BLUELEAF_SPORE.get(), BlueleafSporeParticle.Factory::new);
+        Minecraft.getInstance().particleEngine.register(ModParticleTypes.BLOSSOM.get(), BlossomParticle.Factory::new);
     }
 }
