@@ -14,14 +14,6 @@ import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 import java.util.Random;
 
 public class BlueleafPlainsSurfaceBuilder extends SurfaceBuilder<SurfaceBuilderConfig> {
-    public static final BlockState BLUELEAF_GRASS = ModBlocks.BLUELEAF_GRASS_BLOCK.get().defaultBlockState();
-    public static final BlockState BLUELEAVES = ModBlocks.BLUELEAVES.get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true);
-    public static final BlockState BLUELEAF_DIRT = ModBlocks.BLUELEAF_DIRT.get().defaultBlockState();
-
-    public static final SurfaceBuilderConfig BLUELEAF_GRASS_CONFIG = new SurfaceBuilderConfig(BLUELEAF_GRASS, BLUELEAF_GRASS, BLUELEAF_GRASS);
-    public static final SurfaceBuilderConfig BLUELEAVES_CONFIG = new SurfaceBuilderConfig(BLUELEAVES, BLUELEAVES, BLUELEAVES);
-    public static final SurfaceBuilderConfig DIRT_CONFIG = new SurfaceBuilderConfig(BLUELEAF_DIRT, BLUELEAF_DIRT, BLUELEAF_DIRT);
-
     public BlueleafPlainsSurfaceBuilder(Codec<SurfaceBuilderConfig> pCodec) {
         super(pCodec);
     }
