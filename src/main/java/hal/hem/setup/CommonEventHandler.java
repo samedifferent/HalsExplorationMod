@@ -13,11 +13,5 @@ public class CommonEventHandler {
     @SubscribeEvent
     public static void biomeModification(BiomeLoadingEvent event) {
         event.getGeneration().getFeatures(GenerationStage.Decoration.UNDERGROUND_ORES).add(() -> ModConfiguredFeatures.ORE_ROSE_COPPER);
-        if (event.getName() != null) {
-            if (event.getName().getPath().equals("blueleaf_plains")) {
-                event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION).add(() -> ModConfiguredFeatures.PATCH_GRASS_BLUELEAF);
-                event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION).add(() -> ModConfiguredFeatures.STONE_PILLAR);
-            }
-        }
     }
 }

@@ -45,7 +45,10 @@
     [],
     [],
     [],
-    [],
+    [
+      "hem:patch_grass_blueleaf",
+      "hem:stone_pillar"
+    ],
     []
   ]
 }
