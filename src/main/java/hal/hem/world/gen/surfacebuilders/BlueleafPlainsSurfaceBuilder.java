@@ -14,6 +14,12 @@ import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 import java.util.Random;
 
 public class BlueleafPlainsSurfaceBuilder extends SurfaceBuilder<SurfaceBuilderConfig> {
+    public static final BlockState BLUELEAF_GRASS = ModBlocks.BLUELEAF_GRASS_BLOCK.get().defaultBlockState();
+    public static final BlockState BLUELEAVES = ModBlocks.BLUELEAVES.get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true);
+    public static final BlockState COARSE_BLUELEAF_DIRT = ModBlocks.COARSE_BLUELEAF_DIRT.get().defaultBlockState();
+    public static final BlockState BLUELEAF_DIRT = ModBlocks.BLUELEAF_DIRT.get().defaultBlockState();
+    public static final BlockState BLUEROCK = ModBlocks.BLUEROCK.get().defaultBlockState();
+
     public BlueleafPlainsSurfaceBuilder(Codec<SurfaceBuilderConfig> pCodec) {
         super(pCodec);
     }
@@ -44,25 +50,25 @@ public class BlueleafPlainsSurfaceBuilder extends SurfaceBuilder<SurfaceBuilderC
                     if(y >= seaLevel - 1){
                         switch (random.nextInt(10)) {
                             case 1:
-                                chunk.setBlockState(mutable, ModBlocks.COARSE_BLUELEAF_DIRT.get().defaultBlockState(), false);
+                                chunk.setBlockState(mutable, COARSE_BLUELEAF_DIRT, false);
                                 break;
                             case 2:
-                                chunk.setBlockState(mutable, ModBlocks.BLUELEAVES.get().defaultBlockState().setValue(LeavesBlock.PERSISTENT, true), false);
+                                chunk.setBlockState(mutable, BLUELEAVES, false);
                                 break;
                             default:
-                                chunk.setBlockState(mutable, ModBlocks.BLUELEAF_GRASS_BLOCK.get().defaultBlockState(), false);
+                                chunk.setBlockState(mutable, BLUELEAF_GRASS, false);
                                 break;
                         }
                     } else if(y >= seaLevel - scaledNoise - 7){
-                        chunk.setBlockState(mutable, ModBlocks.BLUELEAF_DIRT.get().defaultBlockState(), false);
+                        chunk.setBlockState(mutable, BLUELEAF_DIRT, false);
                     } else{
-                        chunk.setBlockState(mutable, ModBlocks.BLUELEAF_DIRT.get().defaultBlockState(), false);
+                        chunk.setBlockState(mutable, BLUELEAF_DIRT, false);
                     }
                 } else if (depth <= scaledNoise) {
                     depth++;
-                    chunk.setBlockState(mutable, ModBlocks.BLUELEAF_DIRT.get().defaultBlockState(), false);
+                    chunk.setBlockState(mutable, BLUELEAF_DIRT, false);
                 } else {
-                    chunk.setBlockState(mutable, ModBlocks.BLUELEAF_DIRT.get().defaultBlockState(), false);
+                    chunk.setBlockState(mutable, BLUEROCK, false);
                 }
             }
         }
