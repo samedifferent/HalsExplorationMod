@@ -27,6 +27,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> BLUELEAF_GRASS_BLOCK = registerBlock("blueleaf_grass_block", BlueleafGrassBlock::new);
     public static final RegistryObject<BlueleafBushBlock> BLUELEAF_BUSH = registerBlock("blueleaf_bush", BlueleafBushBlock::new);
     public static final RegistryObject<Block> BLUELEAF_DIRT = registerBlock("blueleaf_dirt", () -> new Block(AbstractBlock.Properties.copy(Blocks.DIRT)));
+    public static final RegistryObject<Block> COARSE_BLUELEAF_DIRT = registerBlock("coarse_blueleaf_dirt", () -> new Block(AbstractBlock.Properties.copy(Blocks.DIRT)));
     public static final RegistryObject<BlueleafTallGrassBlock> BLUELEAF_TALL_GRASS = registerBlock("blueleaf_tall_grass", BlueleafTallGrassBlock::new);
     public static final RegistryObject<BlueleafTallGrassBlock> BLUELEAF_MEDIUM_GRASS = registerBlock("blueleaf_medium_grass", BlueleafTallGrassBlock::new);
     public static final RegistryObject<BlueleafTallGrassBlock> BLUELEAF_SHORT_GRASS = registerBlock("blueleaf_short_grass", BlueleafTallGrassBlock::new);
