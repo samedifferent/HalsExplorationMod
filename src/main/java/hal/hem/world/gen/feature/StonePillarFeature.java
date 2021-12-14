@@ -24,7 +24,7 @@ public class StonePillarFeature extends Feature<NoFeatureConfig> {
     }
 
     public static boolean isAirOrLeaves(IWorldGenerationBaseReader reader, BlockPos pos) {
-        return reader.isStateAtPosition(pos, (state) -> state.isAir() || state.is(BlockTags.LEAVES) || state.is(ModBlocks.BLUELEAF_SHORT_GRASS.get()) || state.is(ModBlocks.BLUELEAF_MEDIUM_GRASS.get()) || state.is(ModBlocks.BLUELEAF_TALL_GRASS.get()));
+        return reader.isStateAtPosition(pos, (state) -> state.isAir() || state.is(BlockTags.LEAVES) || state.is(ModBlocks.BLUELEAF_SHORT_GRASS.get()) || state.is(ModBlocks.BLUELEAF_MEDIUM_GRASS.get()) || state.is(ModBlocks.BLUELEAF_TALL_GRASS.get()) || state.is(ModBlocks.BLUELEAF_WHEAT.get()));
     }
 
     @Override

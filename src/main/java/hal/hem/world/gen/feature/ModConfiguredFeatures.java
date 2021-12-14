@@ -10,6 +10,7 @@ import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
+import net.minecraft.world.gen.blockplacer.DoublePlantBlockPlacer;
 import net.minecraft.world.gen.blockplacer.SimpleBlockPlacer;
 import net.minecraft.world.gen.blockstateprovider.SimpleBlockStateProvider;
 import net.minecraft.world.gen.blockstateprovider.WeightedBlockStateProvider;
@@ -24,6 +25,7 @@ public class ModConfiguredFeatures {
     public static final ConfiguredFeature<?,?> ORE_ROSE_COPPER = register("ore_rose_copper", Feature.ORE.configured(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.ROSE_COPPER_ORE.get().defaultBlockState(), 8)).range(16).squared().count(8));
     public static final ConfiguredFeature<?, ?> PATCH_GRASS_BLUELEAF = register("patch_grass_blueleaf", Feature.RANDOM_PATCH.configured((new BlockClusterFeatureConfig.Builder((new WeightedBlockStateProvider()).add(ModBlocks.BLUELEAF_SHORT_GRASS.get().defaultBlockState(), 1).add(ModBlocks.BLUELEAF_MEDIUM_GRASS.get().defaultBlockState(), 1).add(ModBlocks.BLUELEAF_TALL_GRASS.get().defaultBlockState(), 1), SimpleBlockPlacer.INSTANCE)).tries(32).build()).decorated(Features.Placements.HEIGHTMAP_DOUBLE_SQUARE).count(25));
     public static final ConfiguredFeature<?, ?> STONE_PILLAR = register("stone_pillar", ModFeatures.STONE_PILLAR.get().configured(IFeatureConfig.NONE).decorated(Features.Placements.HEIGHTMAP_DOUBLE_SQUARE).count(3));
+    public static final ConfiguredFeature<?, ?> BLUELEAF_WHEAT = register("blueleaf_wheat", Feature.RANDOM_PATCH.configured((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(ModBlocks.BLUELEAF_WHEAT.get().defaultBlockState()), new DoublePlantBlockPlacer())).tries(32).build()).decorated(Features.Placements.HEIGHTMAP_DOUBLE_SQUARE).count(50));
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String name, ConfiguredFeature<FC, ?> feature) {
         return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation(HEM.MOD_ID, name), feature);

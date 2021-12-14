@@ -83,7 +83,17 @@
           "biome": "hem:blueleaf_plains",
           "parameters": {
             "altitude": 0,
-            "temperature": 0,
+            "temperature": 0.5,
+            "humidity": 0,
+            "weirdness": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "hem:hayfever_fields",
+          "parameters": {
+            "altitude": 0,
+            "temperature": 0.5,
             "humidity": 0,
             "weirdness": 0,
             "offset": 0

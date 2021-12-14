@@ -1,0 +1,54 @@
+{
+  "surface_builder": "hem:blueleaf_dirt",
+  "depth": 0.1,
+  "scale": 0.05,
+  "temperature": 0.5,
+  "downfall": 0.5,
+  "precipitation": "none",
+  "category": "none",
+  "player_spawn_friendly": true,
+  "effects": {
+    "sky_color": 7972607,
+    "fog_color": 12638463,
+    "water_color": 26367,
+    "water_fog_color": 26367,
+    "grass_color": 37375,
+    "foliage_color": 6724095,
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2
+    },
+    "particle": {
+      "options": {
+        "type": "hem:blueleaf_spore"
+      },
+      "probability": 0.005
+    }
+  },
+  "starts": [],
+  "spawners": {},
+  "spawn_costs": {},
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:canyon"
+    ]
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "hem:blueleaf_wheat",
+      "hem:stone_pillar"
+    ],
+    []
+  ]
+}
