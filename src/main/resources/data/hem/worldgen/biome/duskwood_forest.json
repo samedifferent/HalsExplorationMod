@@ -48,7 +48,8 @@
     [
       "hem:patch_mushroom_blueleaf",
       "hem:blueleaf_bush",
-      "hem:patch_grass_blueleaf"
+      "hem:patch_grass_blueleaf",
+      "hem:small_blueleaf_tree"
     ],
     []
   ]
