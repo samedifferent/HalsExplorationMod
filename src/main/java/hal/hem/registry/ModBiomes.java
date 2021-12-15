@@ -19,10 +19,12 @@ public class ModBiomes {
     static {
         createBiome("blueleaf_plains", BiomeMaker::theVoidBiome);
         createBiome("hayfever_fields", BiomeMaker::theVoidBiome);
+        createBiome("duskwood_forest", BiomeMaker::theVoidBiome);
     }
 
     public static final RegistryKey<Biome> BLUELEAF_PLAINS = registerBiome("blueleaf_plains");
     public static final RegistryKey<Biome> HAYFEVER_FIELDS = registerBiome("hayfever_fields");
+    public static final RegistryKey<Biome> DUSKWOOD_FOREST = registerBiome("duskwood_forest");
 
     public static RegistryKey<Biome> registerBiome(String name) {
         return RegistryKey.create(Registry.BIOME_REGISTRY, new ResourceLocation(HEM.MOD_ID, name));
@@ -35,5 +37,6 @@ public class ModBiomes {
     public static void registerBiomes() {
         BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(BLUELEAF_PLAINS, 10));
         BiomeManager.addBiome(BiomeManager.BiomeType.WARM, new BiomeManager.BiomeEntry(HAYFEVER_FIELDS, 10));
+        BiomeManager.addBiome(BiomeManager.BiomeType.COOL, new BiomeManager.BiomeEntry(DUSKWOOD_FOREST, 10));
     }
 }

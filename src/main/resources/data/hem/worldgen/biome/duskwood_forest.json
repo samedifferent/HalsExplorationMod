@@ -1,17 +1,17 @@
 {
-  "surface_builder": "hem:blueleaf_dirt",
+  "surface_builder": "hem:blueleaf_plains",
   "depth": 0.1,
-  "scale": 0.05,
-  "temperature": 0.5,
+  "scale": 0,
+  "temperature": 0.25,
   "downfall": 0.5,
   "precipitation": "none",
   "category": "none",
   "player_spawn_friendly": true,
   "effects": {
-    "sky_color": 7972607,
+    "sky_color": 1913931,
     "fog_color": 12638463,
-    "water_color": 10079487,
-    "water_fog_color": 3381759,
+    "water_color": 28824,
+    "water_fog_color": 2321027,
     "grass_color": 37375,
     "foliage_color": 6724095,
     "mood_sound": {
@@ -24,7 +24,7 @@
       "options": {
         "type": "hem:blueleaf_spore"
       },
-      "probability": 0.005
+      "probability": 0.015
     }
   },
   "starts": [],
@@ -46,8 +46,9 @@
     [],
     [],
     [
-      "hem:blueleaf_wheat",
-      "hem:stone_pillar"
+      "hem:patch_mushroom_blueleaf",
+      "hem:blueleaf_bush",
+      "hem:patch_grass_blueleaf"
     ],
     []
   ]
