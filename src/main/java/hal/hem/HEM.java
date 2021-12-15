@@ -1,6 +1,7 @@
 package hal.hem;
 
 import hal.hem.registry.*;
+import hal.hem.world.gen.feature.ModConfiguredFeatures;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -42,6 +43,6 @@ public class HEM {
     }
 
     private void setup(final FMLCommonSetupEvent event) {
-
+        event.enqueueWork(ModConfiguredFeatures::registerConfiguredFeatures);
     }
 }
