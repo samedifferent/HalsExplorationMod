@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "hal.hem.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "client": [
+  ],
+  "mixins": [
+    "EntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

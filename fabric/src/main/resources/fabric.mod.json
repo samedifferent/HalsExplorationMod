@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "hemfabric",
+  "version": "${version}",
+  "name": "Hals Exploration Mod",
+  "description": "Exploration based tech and vehicle mod.",
+  "authors": [
+    "Halbeargamez",
+    "SameButDifferent",
+    "PhoenixVX"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "GNU GPL v3.0",
+  "icon": "assets/hem/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "hal.hem.HEMFabric"
+    ],
+    "client": [
+      "hal.hem.client.HEMClientFabric"
+    ]
+  },
+  "mixins": [
+    "hem-common.mixins.json",
+    "hem-fabric.mixins.json"
+  ],
+  "depends": {
+    "fabric": "*",
+    "minecraft": ">=1.16",
+    "architectury": ">=1.26.42"
+  }
+}
