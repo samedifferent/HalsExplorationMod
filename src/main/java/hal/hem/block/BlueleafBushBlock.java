@@ -18,12 +18,12 @@ public class BlueleafBushBlock extends BushBlock {
     }
 
     @Override
-    protected boolean mayPlaceOn(BlockState p_200014_1_, IBlockReader p_200014_2_, BlockPos p_200014_3_) {
-        return p_200014_1_.is(Blocks.GRASS_BLOCK) || p_200014_1_.is(Blocks.DIRT) || p_200014_1_.is(Blocks.COARSE_DIRT) || p_200014_1_.is(Blocks.PODZOL) || p_200014_1_.is(Blocks.FARMLAND) || p_200014_1_.is((ModBlocks.BLUELEAF_GRASS_BLOCK.get())) || p_200014_1_.is((ModBlocks.BLUELEAF_DIRT.get()));
+    protected boolean mayPlaceOn(BlockState state, IBlockReader reader, BlockPos pos) {
+        return state.is((ModBlocks.BLUELEAF_GRASS_BLOCK.get())) || state.is((ModBlocks.BLUELEAF_DIRT.get())) || state.is((ModBlocks.COARSE_BLUELEAF_DIRT.get()));
     }
 
     @Override
-    public VoxelShape getShape(BlockState p_220053_1_, IBlockReader p_220053_2_, BlockPos p_220053_3_, ISelectionContext p_220053_4_) {
+    public VoxelShape getShape(BlockState state, IBlockReader reader, BlockPos pos, ISelectionContext context) {
         return SHAPE;
     }
 }

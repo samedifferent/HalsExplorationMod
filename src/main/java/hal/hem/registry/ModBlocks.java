@@ -51,7 +51,7 @@ public class ModBlocks {
     public static final RegistryObject<LeavesBlock> BLUELEAVES = registerBlock("blueleaves", () -> new LeavesBlock(leaves));
     public static final RegistryObject<LeavesBlock> FLOWERING_BLUELEAVES = registerBlock("flowering_blueleaves", () -> new LeavesBlock(leaves));
     public static final RegistryObject<RotatedPillarBlock> BLUELEAF_LOG = registerBlock("blueleaf_log", () -> new RotatedPillarBlock(log));
-    public static final RegistryObject<SaplingBlock> BLUELEAF_SAPLING = registerBlock("blueleaf_sapling", () -> new SaplingBlock(new OakTree(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<NbtSaplingBlock> BLUELEAF_SAPLING = registerBlock("blueleaf_sapling", () -> new NbtSaplingBlock(() -> ModFeatures.BLUELEAF_PLAINS_TREE.get(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
     public static final RegistryObject<SmallTreeBlock> SMALL_BLUELEAF_TREE_TOP = BLOCKS.register("small_blueleaf_tree_top", SmallTreeBlock::new);
     public static final RegistryObject<SmallTreeBlock> SMALL_BLUELEAF_TREE_MIDDLE = BLOCKS.register("small_blueleaf_tree_middle", SmallTreeBlock::new);
     public static final RegistryObject<SmallTreeBlock> SMALL_BLUELEAF_TREE_MIDDLE_LEAVES = BLOCKS.register("small_blueleaf_tree_middle_leaves", SmallTreeBlock::new);

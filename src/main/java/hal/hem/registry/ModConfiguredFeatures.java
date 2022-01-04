@@ -21,6 +21,7 @@ public class ModConfiguredFeatures {
     public static final ConfiguredFeature<?, ?> BLUELEAF_BUSH = Feature.RANDOM_PATCH.configured((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(ModBlocks.BLUELEAF_BUSH.get().defaultBlockState()), SimpleBlockPlacer.INSTANCE)).tries(32).build()).decorated(Features.Placements.HEIGHTMAP_DOUBLE_SQUARE).chance(10);
     public static final ConfiguredFeature<?, ?> SMALL_BLUELEAF_TREE = ModFeatures.SMALL_BLUELEAF_TREE.get().configured(IFeatureConfig.NONE).decorated(Features.Placements.HEIGHTMAP_SQUARE).decorated(Placement.COUNT_EXTRA.configured(new AtSurfaceWithExtraConfig(10, 0.1F, 1)));
     public static final ConfiguredFeature<?, ?> BLUELEAF_PLAINS_TREE = ModFeatures.BLUELEAF_PLAINS_TREE.get().configured(IFeatureConfig.NONE).decorated(Features.Placements.HEIGHTMAP_SQUARE).decorated(Placement.COUNT_EXTRA.configured(new AtSurfaceWithExtraConfig(2, 0.1F, 1)));
+    public static final ConfiguredFeature<?, ?> PLAINS_BOULDER = ModFeatures.PLAINS_BOULDER.get().configured(IFeatureConfig.NONE).decorated(Features.Placements.HEIGHTMAP_SQUARE).count(1);
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String name, ConfiguredFeature<FC, ?> feature) {
         return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation(HEM.MOD_ID, name), feature);
@@ -35,5 +36,6 @@ public class ModConfiguredFeatures {
         register("blueleaf_bush", BLUELEAF_BUSH);
         register("small_blueleaf_tree", SMALL_BLUELEAF_TREE);
         register("blueleaf_plains_tree", BLUELEAF_PLAINS_TREE);
+        register("plains_boulder", PLAINS_BOULDER);
     }
 }

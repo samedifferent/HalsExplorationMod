@@ -47,8 +47,9 @@
     [],
     [
       "hem:patch_grass_blueleaf",
-      "hem:stone_pillar",
-      "hem:blueleaf_plains_tree"
+      "hem:blueleaf_plains_tree",
+      "hem:plains_boulder",
+      "hem:stone_pillar"
     ],
     []
   ]

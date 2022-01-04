@@ -17,15 +17,12 @@ import net.minecraft.world.gen.feature.template.TemplateManager;
 
 import java.util.Random;
 
-public class BlueleafPlainsTreeFeature extends Feature<NoFeatureConfig> {
-    private static final ResourceLocation SMALL_1 = new ResourceLocation(HEM.MOD_ID, "trees/plains_tree_small_1");
-    private static final ResourceLocation MEDIUM_1 = new ResourceLocation(HEM.MOD_ID, "trees/plains_tree_medium_1");
-    private static final ResourceLocation MEDIUM_2 = new ResourceLocation(HEM.MOD_ID, "trees/plains_tree_medium_2");
-    private static final ResourceLocation MEDIUM_3 = new ResourceLocation(HEM.MOD_ID, "trees/plains_tree_medium_3");
-    private static final ResourceLocation[] trees = new ResourceLocation[]{SMALL_1, MEDIUM_1, MEDIUM_2, MEDIUM_3};
+public class NbtFeature extends Feature<NoFeatureConfig> {
+    private ResourceLocation[] nbts;
 
-    public BlueleafPlainsTreeFeature() {
+    public NbtFeature(ResourceLocation[] nbts) {
         super(NoFeatureConfig.CODEC);
+        this.nbts = nbts;
     }
 
     PlacementSettings placementSettings = new PlacementSettings().setMirror(Mirror.NONE).addProcessor(BlockIgnoreStructureProcessor.STRUCTURE_AND_AIR).setIgnoreEntities(false);
@@ -45,7 +42,7 @@ public class BlueleafPlainsTreeFeature extends Feature<NoFeatureConfig> {
 
         BlockPos.Mutable blockpos$Mutable = new BlockPos.Mutable();
         TemplateManager templatemanager = world.getLevel().getServer().getStructureManager();
-        Template template = templatemanager.get(trees[random.nextInt(trees.length)]);
+        Template template = templatemanager.get(nbts[random.nextInt(nbts.length)]);
 
         if (template == null) {
             HEM.LOGGER.warn("NBT does not exist!");
