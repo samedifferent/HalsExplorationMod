@@ -1,7 +1,7 @@
 package hal.hem.setup;
 
 import hal.hem.HEM;
-import hal.hem.world.gen.feature.ModConfiguredFeatures;
+import hal.hem.registry.ModConfiguredFeatures;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

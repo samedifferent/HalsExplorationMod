@@ -1,6 +1,7 @@
 package hal.hem.registry;
 
 import hal.hem.HEM;
+import hal.hem.world.gen.feature.BlueleafPlainsTreeFeature;
 import hal.hem.world.gen.feature.SmallBlueleafTreeFeature;
 import hal.hem.world.gen.feature.StonePillarFeature;
 import net.minecraft.world.gen.feature.Feature;
@@ -14,4 +15,5 @@ public class ModFeatures {
 
     public static final RegistryObject<StonePillarFeature> STONE_PILLAR = FEATURES.register("stone_pillar", () -> new StonePillarFeature(NoFeatureConfig.CODEC));
     public static final RegistryObject<SmallBlueleafTreeFeature> SMALL_BLUELEAF_TREE = FEATURES.register("small_blueleaf_tree", () -> new SmallBlueleafTreeFeature(NoFeatureConfig.CODEC));
+    public static final RegistryObject<BlueleafPlainsTreeFeature> BLUELEAF_PLAINS_TREE = FEATURES.register("plains_tree", () -> new BlueleafPlainsTreeFeature());
 }

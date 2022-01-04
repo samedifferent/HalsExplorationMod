@@ -34,12 +34,9 @@ public class StonePillarFeature extends Feature<NoFeatureConfig> {
         }
         pos = pos.above();
 
-        ArrayList<BlockState> BLOCKS = new ArrayList<>(Arrays.asList(Blocks.COBBLESTONE.defaultBlockState(), Blocks.ANDESITE.defaultBlockState(), Blocks.POLISHED_ANDESITE.defaultBlockState()));
-        ArrayList<BlockState> WALLS = new ArrayList<>(Arrays.asList(Blocks.COBBLESTONE_WALL.defaultBlockState(), Blocks.ANDESITE_WALL.defaultBlockState()));
-
         if (!reader.isWaterAt(pos.below()) && !reader.isStateAtPosition(pos.below(), blockState -> blockState.is(BlockTags.WALLS))) {
-            setBlock(reader, pos, BLOCKS.get(random.nextInt(BLOCKS.size())));
-            setBlock(reader, pos.above(1), WALLS.get(random.nextInt(WALLS.size())));
+            setBlock(reader, pos, random.nextInt(2) == 0 ? Blocks.COBBLESTONE.defaultBlockState() : Blocks.ANDESITE.defaultBlockState());
+            setBlock(reader, pos.above(1), random.nextInt(2) == 0 ? Blocks.COBBLESTONE_WALL.defaultBlockState() : Blocks.ANDESITE_WALL.defaultBlockState());
         }
 
         return false;

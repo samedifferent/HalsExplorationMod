@@ -1,7 +1,7 @@
 package hal.hem;
 
 import hal.hem.registry.*;
-import hal.hem.world.gen.feature.ModConfiguredFeatures;
+import hal.hem.registry.ModConfiguredFeatures;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -15,7 +15,7 @@ import org.apache.logging.log4j.Logger;
 @Mod(HEM.MOD_ID)
 public class HEM {
 
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "hem";
 
     public static final ItemGroup TAB = new ItemGroup(HEM.MOD_ID) {

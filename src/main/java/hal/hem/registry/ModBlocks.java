@@ -52,10 +52,10 @@ public class ModBlocks {
     public static final RegistryObject<LeavesBlock> FLOWERING_BLUELEAVES = registerBlock("flowering_blueleaves", () -> new LeavesBlock(leaves));
     public static final RegistryObject<RotatedPillarBlock> BLUELEAF_LOG = registerBlock("blueleaf_log", () -> new RotatedPillarBlock(log));
     public static final RegistryObject<SaplingBlock> BLUELEAF_SAPLING = registerBlock("blueleaf_sapling", () -> new SaplingBlock(new OakTree(), AbstractBlock.Properties.copy(Blocks.OAK_SAPLING)));
-    public static final RegistryObject<SmallTreeBlock> SMALL_BLUELEAF_TREE_TOP = registerBlock("small_blueleaf_tree_top", SmallTreeBlock::new);
-    public static final RegistryObject<SmallTreeBlock> SMALL_BLUELEAF_TREE_MIDDLE = registerBlock("small_blueleaf_tree_middle", SmallTreeBlock::new);
-    public static final RegistryObject<SmallTreeBlock> SMALL_BLUELEAF_TREE_MIDDLE_LEAVES = registerBlock("small_blueleaf_tree_middle_leaves", SmallTreeBlock::new);
-    public static final RegistryObject<SmallTreeBlock> SMALL_BLUELEAF_TREE_BOTTOM = registerBlock("small_blueleaf_tree_bottom", SmallTreeBlock::new);
+    public static final RegistryObject<SmallTreeBlock> SMALL_BLUELEAF_TREE_TOP = BLOCKS.register("small_blueleaf_tree_top", SmallTreeBlock::new);
+    public static final RegistryObject<SmallTreeBlock> SMALL_BLUELEAF_TREE_MIDDLE = BLOCKS.register("small_blueleaf_tree_middle", SmallTreeBlock::new);
+    public static final RegistryObject<SmallTreeBlock> SMALL_BLUELEAF_TREE_MIDDLE_LEAVES = BLOCKS.register("small_blueleaf_tree_middle_leaves", SmallTreeBlock::new);
+    public static final RegistryObject<SmallTreeBlock> SMALL_BLUELEAF_TREE_BOTTOM = BLOCKS.register("small_blueleaf_tree_bottom", SmallTreeBlock::new);
     public static final RegistryObject<Block> BLUELEAF_PLANKS = registerBlock("blueleaf_planks", () -> new Block(planks));
     public static final RegistryObject<SlabBlock> BLUELEAF_SLAB = registerBlock("blueleaf_slab", () -> new SlabBlock(planks));
     public static final RegistryObject<StairsBlock> BLUELEAF_STAIRS = registerBlock("blueleaf_stairs", () -> new StairsBlock(Blocks.OAK_PLANKS::defaultBlockState, planks));

@@ -1,8 +1,6 @@
-package hal.hem.world.gen.feature;
+package hal.hem.registry;
 
 import hal.hem.HEM;
-import hal.hem.registry.ModBlocks;
-import hal.hem.registry.ModFeatures;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.WorldGenRegistries;
@@ -22,6 +20,7 @@ public class ModConfiguredFeatures {
     public static final ConfiguredFeature<?, ?> PATCH_MUSHROOM_BLUELEAF = Feature.RANDOM_PATCH.configured((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(ModBlocks.BLUELEAF_MUSHROOM.get().defaultBlockState()), SimpleBlockPlacer.INSTANCE)).tries(64).noProjection().build()).decorated(Features.Placements.HEIGHTMAP_DOUBLE_SQUARE).count(2);
     public static final ConfiguredFeature<?, ?> BLUELEAF_BUSH = Feature.RANDOM_PATCH.configured((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(ModBlocks.BLUELEAF_BUSH.get().defaultBlockState()), SimpleBlockPlacer.INSTANCE)).tries(32).build()).decorated(Features.Placements.HEIGHTMAP_DOUBLE_SQUARE).chance(10);
     public static final ConfiguredFeature<?, ?> SMALL_BLUELEAF_TREE = ModFeatures.SMALL_BLUELEAF_TREE.get().configured(IFeatureConfig.NONE).decorated(Features.Placements.HEIGHTMAP_SQUARE).decorated(Placement.COUNT_EXTRA.configured(new AtSurfaceWithExtraConfig(10, 0.1F, 1)));
+    public static final ConfiguredFeature<?, ?> BLUELEAF_PLAINS_TREE = ModFeatures.BLUELEAF_PLAINS_TREE.get().configured(IFeatureConfig.NONE).decorated(Features.Placements.HEIGHTMAP_SQUARE).decorated(Placement.COUNT_EXTRA.configured(new AtSurfaceWithExtraConfig(2, 0.1F, 1)));
 
     private static <FC extends IFeatureConfig> ConfiguredFeature<FC, ?> register(String name, ConfiguredFeature<FC, ?> feature) {
         return Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation(HEM.MOD_ID, name), feature);
@@ -35,5 +34,6 @@ public class ModConfiguredFeatures {
         register("patch_mushroom_blueleaf", PATCH_MUSHROOM_BLUELEAF);
         register("blueleaf_bush", BLUELEAF_BUSH);
         register("small_blueleaf_tree", SMALL_BLUELEAF_TREE);
+        register("blueleaf_plains_tree", BLUELEAF_PLAINS_TREE);
     }
 }
