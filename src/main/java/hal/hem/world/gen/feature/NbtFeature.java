@@ -18,7 +18,7 @@ import net.minecraft.world.gen.feature.template.TemplateManager;
 import java.util.Random;
 
 public class NbtFeature extends Feature<NoFeatureConfig> {
-    private ResourceLocation[] nbts;
+    private final ResourceLocation[] nbts;
 
     public NbtFeature(ResourceLocation[] nbts) {
         super(NoFeatureConfig.CODEC);
@@ -34,7 +34,7 @@ public class NbtFeature extends Feature<NoFeatureConfig> {
             mutable.move(Direction.DOWN);
         }
 
-        if (!world.getBlockState(mutable).isAir() && !world.isEmptyBlock(mutable.below()) && !world.isEmptyBlock(mutable.below(2))) {
+        if (!world.getBlockState(mutable).isAir() && !world.isEmptyBlock(mutable.below())) {
             mutable.move(Direction.DOWN);
         } else{
             return false;

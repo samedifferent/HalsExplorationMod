@@ -1,7 +1,6 @@
 package hal.hem.registry;
 
 import hal.hem.HEM;
-import hal.hem.world.gen.feature.BlueleafPlainsTreeFeature;
 import hal.hem.world.gen.feature.NbtFeature;
 import hal.hem.world.gen.feature.SmallBlueleafTreeFeature;
 import hal.hem.world.gen.feature.StonePillarFeature;
