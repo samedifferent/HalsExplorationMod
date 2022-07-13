@@ -35,8 +35,8 @@ public class StonePillarFeature extends Feature<NoFeatureConfig> {
         pos = pos.above();
 
         if (!reader.isWaterAt(pos.below()) && !reader.isStateAtPosition(pos.below(), blockState -> blockState.is(BlockTags.WALLS))) {
-            setBlock(reader, pos, random.nextInt(2) == 0 ? Blocks.COBBLESTONE.defaultBlockState() : Blocks.ANDESITE.defaultBlockState());
-            setBlock(reader, pos.above(1), random.nextInt(2) == 0 ? Blocks.COBBLESTONE_WALL.defaultBlockState() : Blocks.ANDESITE_WALL.defaultBlockState());
+            setBlock(reader, pos, random.nextInt(2) == 0 ? ModBlocks.BLUEROCK.get().defaultBlockState() : ModBlocks.COBBLED_BLUEROCK.get().defaultBlockState());
+            setBlock(reader, pos.above(1), random.nextInt(2) == 0 ? ModBlocks.COBBLED_BLUEROCK_WALL.get().defaultBlockState() : ModBlocks.COBBLED_BLUEROCK_WALL.get().defaultBlockState());
         }
 
         return false;
